@@ -30,7 +30,9 @@ const Home = () => {
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
           <img src={logo} alt="NSS IIT Delhi" className="h-20 w-20 mb-10" />
           <h1 className="text-xl md:text-5xl sm:text-3xl font-bold mb-10 mx-2 text-center">NSS Dwarkadas J. Sanghvi College of Engineering</h1>
-          <p className="text-md md:text-2xl text-center">FOR YOU, WITH YOU, ALWAYS!</p>
+          <p className="text-md md:text-2xl text-center">
+            <div className="w-full border-white mb-5 border-b-4"></div>
+            FOR YOU, WITH YOU, ALWAYS!</p>
         </div>
       </div>
       <div className="bg-gray-100 w-full">
