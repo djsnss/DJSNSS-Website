@@ -2,10 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { featuresData } from '../data/index';
 import logo from '../assets/DJSLogo.png';
+import College from '../assets/College.avif';
 import CorePic from '../assets/Core.jpg';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { FaArrowRight } from 'react-icons/fa';
+import ImageCarousel from '../components/ImageCarousel';
+
+const images = [CorePic, College, CorePic, College];
+const captions = ['Caption 1', 'Caption 2', 'Caption 3', 'Caption 4'];
 
 const Home = () => {
   const getWidthClasses = (index, length) => {
@@ -44,6 +49,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <ImageCarousel images={images} captions={captions} />
       <Footer />
     </div>
   );
