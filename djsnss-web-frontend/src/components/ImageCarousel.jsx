@@ -30,7 +30,7 @@ const CustomCarousel = ({ images, captions }) => {
   };
 
   const startAutoScroll = () => {
-    intervalRef.current = setInterval(nextImage, 2000);
+    intervalRef.current = setInterval(nextImage, 5000);
   };
 
   const stopAutoScroll = () => {
@@ -44,7 +44,7 @@ const CustomCarousel = ({ images, captions }) => {
 
   return (
     <div
-      className="relative w-full h-[50vh] overflow-hidden"
+      className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden"
       onMouseEnter={stopAutoScroll}
       onMouseLeave={startAutoScroll}
     >

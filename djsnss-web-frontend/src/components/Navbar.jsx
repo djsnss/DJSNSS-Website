@@ -37,20 +37,20 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 ${isScrolled ? 'bg-white shadow-md shadow-opacity-50 shadow-black' : 'bg-white shadow-md shadow-opacity-50 shadow-black'} transition duration-300`}>
-      <div className="container mx-auto flex md:justify-evenly justify-between items-center p-4">
-        <div className='sm:flex justify-start items-center hidden'>
-        <Link to="/" className="text-xl font-bold text-gray-800 flex items-center">
-          <img src={logo} alt="Logo" className="h-10 w-10 mr-2" />
-          DJSNSS
-        </Link>
-        <a href="https://www.djsce.ac.in/" target="_blank" rel="noreferrer"  className="text-xl font-bold text-gray-800 flex items-center">
-          <img src={DJSLogo} alt="DJSCE" className="h-10 w-10 ml-2" />
-          DJ Sanghvi
-        </a>
+      <div className="container mx-auto flex lg:justify-evenly justify-between items-center p-4">
+        <div className='flex justify-start items-center '>
+          <Link to="/" className="text-xl font-bold text-gray-800 items-center flex">
+            <img src={logo} alt="Logo" className="h-10 w-10 mr-2" />
+            DJSNSS
+          </Link>
+          <a href="https://www.djsce.ac.in/" target="_blank" rel="noreferrer" className="text-xl font-bold text-gray-800 items-center sm:flex hidden">
+            <img src={DJSLogo} alt="DJSCE" className="h-10 w-10 ml-2" />
+            DJ Sanghvi
+          </a>
         </div>
-        <div className="hidden md:flex space-x-6 items-center">
+        <div className="hidden lg:flex space-x-6 items-center">
           {MenuLinks.map((link) => (
-            <Link key={link.id} to={`/${link.link}`} className="text-gray-800 hover:text-gray-600">
+            <Link key={link.id} to={`/${link.link}`} className="text-gray-600 hover:text-black font-semibold">
               {link.name}
             </Link>
           ))}
@@ -61,7 +61,7 @@ const Navbar = () => {
             Hours Complaint
           </Link>
         </div>
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button onClick={toggleMenu} className={`text-gray-800 focus:outline-none ${!isOpen ? 'block justify-between' : 'hidden'}`}>
             <svg
               className={`w-6 h-6 transition-transform transform ${isOpen ? 'rotate-180' : 'rotate-0'} duration-300`}
