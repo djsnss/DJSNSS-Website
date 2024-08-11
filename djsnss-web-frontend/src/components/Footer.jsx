@@ -26,7 +26,7 @@ export function Component() {
   return (
     <Footer bgDark>
       <div className="w-full">
-        <div className="grid bg-white text-black w-full grid-cols-2 gap-8 px-6 py-6 md:grid-cols-4">
+        <div className="grid bg-white text-black w-full grid-cols-2 gap-8 pl-4 sm:pl-14 py-6 md:grid-cols-4">
           {/* Company Section */}
           <div>
             <FooterTitle className="text-sm sm:text-md md:text-lg pb-3" title="Useful Links" />

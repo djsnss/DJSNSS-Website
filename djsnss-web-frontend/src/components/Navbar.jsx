@@ -43,10 +43,6 @@ const Navbar = () => {
             <img src={logo} alt="Logo" className="h-10 w-10 mr-2" />
             DJSNSS
           </Link>
-          <a href="https://www.djsce.ac.in/" target="_blank" rel="noreferrer" className="text-xl font-bold text-gray-800 items-center sm:flex hidden">
-            <img src={DJSLogo} alt="DJSCE" className="h-10 w-10 ml-2" />
-            DJ Sanghvi
-          </a>
         </div>
         <div className="hidden lg:flex space-x-6 items-center">
           {MenuLinks.map((link) => (
