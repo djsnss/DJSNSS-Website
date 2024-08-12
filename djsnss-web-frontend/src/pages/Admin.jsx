@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
+=======
+>>>>>>> 6b64232c702941bc692ea9f0a12a1160a9b94f63
 const Admin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -35,6 +38,7 @@ const Admin = () => {
 
   return (
     <div className='flex flex-col'>
+<<<<<<< HEAD
       <Navbar />
       <div className="container p-auto mt-20 mx-auto p-4 max-w-md">
         <h1 className="text-3xl font-bold text-gray-800 mb-6">Admin Login</h1>
@@ -73,6 +77,10 @@ const Admin = () => {
             Login
           </button>
         </form>
+=======
+      <div className="container p-auto mt-20 mx-auto p-4">
+        <h1 className="text-3xl font-bold text-gray-800">Admin</h1>
+>>>>>>> 6b64232c702941bc692ea9f0a12a1160a9b94f63
       </div>
     </div>
   );

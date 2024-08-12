@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 // Events.js
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
+=======
+>>>>>>> 6b64232c702941bc692ea9f0a12a1160a9b94f63
 const Events = () => {
   const [events, setEvents] = useState([]);
 
@@ -15,7 +18,6 @@ const Events = () => {
 
   return (
     <div className='flex flex-col'>
-      <Navbar />
       <div className="container p-auto mt-20 mx-auto p-4">
         <h1 className="text-3xl font-bold text-center mb-8">Events</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

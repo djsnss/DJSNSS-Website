@@ -44,7 +44,7 @@ const CustomCarousel = ({ images, captions }) => {
 
   return (
     <div
-      className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden"
+      className="relative w-full h-[80vh] overflow-hidden"
       onMouseEnter={stopAutoScroll}
       onMouseLeave={startAutoScroll}
     >

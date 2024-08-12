@@ -1,16 +1,11 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { featuresData } from '../data/index';
 import logo from '../assets/DJSLogo.png';
 import College from '../assets/College.avif';
 import CorePic from '../assets/Core.jpg';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import { FaArrowRight } from 'react-icons/fa';
 import ImageCarousel from '../components/ImageCarousel';
-import Faculty from '../components/Faculty';
 import SneakPeek from '../components/SneakPeek';
-
+import Faculty_Team from '../components/Faculty_Team';
 const images = [CorePic, College, CorePic, College];
 const captions = ['Caption 1', 'Caption 2', 'Caption 3', 'Caption 4'];
 
@@ -24,8 +19,7 @@ const Home = () => {
 
   return (
     <div className='flex flex-col'>
-      <Navbar />
-      <div className="w-full h-screen max-h-[600px] bg-cover bg-center relative" style={{ backgroundImage: `url(${CorePic})`, backgroundAttachment: 'fixed' }}>
+      <div className="w-full h-screen max-h-[100vh] bg-cover bg-center relative" style={{ backgroundImage: `url(${CorePic})`, backgroundAttachment: 'fixed' }}>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
           <img src={logo} alt="NSS IIT Delhi" className="h-20 w-20 mb-10" />
@@ -55,9 +49,8 @@ const Home = () => {
         </div>
       </div>
       <SneakPeek />
+      <Faculty_Team />
       <ImageCarousel images={images} captions={captions} />
-      <Faculty />
-      <Footer />
     </div>
   );
 };
