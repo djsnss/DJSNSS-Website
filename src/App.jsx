@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Admin from './pages/Admin';
-import AdminWorkPage from './pages/AdminWorkPage'; // Import AdminWorkPage
+import AdminWorkPage from './pages/AdminWorkPage';
 import Events from './pages/Events';
 import CheckHours from './pages/CheckHours';
 import HoursComplaint from './pages/HoursComplaint';
@@ -12,7 +12,7 @@ import Volunteer from './pages/Volunteer';
 import VolunteerPolicy from './pages/VolunteerPolicy';
 import EventDetails from './pages/EventDetails';
 import EventRegistration from './pages/EventRegistration';
-
+import Login from './pages/Login';
 import Footer from './components/Footer';
 import Team from './pages/Team';
 
@@ -25,7 +25,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/admin-work" element={<AdminWorkPage />} /> {/* Add AdminWorkPage route */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/admin-work" element={<AdminWorkPage />} />
           <Route path="/events" element={<Events />} />
           <Route path="/check-hours" element={<CheckHours />} />
           <Route path="/hours-complaint" element={<HoursComplaint />} />
@@ -36,6 +37,7 @@ const App = () => {
         </Routes>
       </div>
      </Router>
-)}
+  )
+}
 
 export default App;

@@ -15,22 +15,21 @@ const MenuLinks = [
     link: 'events',
   },
   {
-    id: 4,
+    id:4,
     name: 'Volunteer',
     link: 'volunteer',
   },
   {
-    id: 5,
-    name: 'Admin',
-    link: 'admin',
+    id:5,
+    name: 'Login',
+    link: 'login',
   },
   {
     id: 6,
-    name: 'Login',
-    link: 'login',  // Add this line
+    name: 'Admin',
+    link: 'admin',
   },
 ]
-
 
 export { MenuLinks };
 
