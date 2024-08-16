@@ -7,9 +7,9 @@ router.post('/create', async (req, res) => {
   try {
     const event = new Event(req.body);
     await event.save();
-    res.status(201).json(event);
+    res.status(201).json({ success: true, data: event });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).json({ success: false, error: error.message });
   }
 });
 
@@ -17,9 +17,9 @@ router.post('/create', async (req, res) => {
 router.get('/', async (req, res) => {
   try {
     const events = await Event.find();
-    res.status(200).json(events);
+    res.status(200).json({ success: true, data: events });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ success: false, error: error.message });
   }
 });
 
@@ -28,11 +28,11 @@ router.put('/:id', async (req, res) => {
   try {
     const event = await Event.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!event) {
-      return res.status(404).json({ message: 'Event not found' });
+      return res.status(404).json({ success: false, message: 'Event not found' });
     }
-    res.status(200).json(event);
+    res.status(200).json({ success: true, data: event });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).json({ success: false, error: error.message });
   }
 });
 
@@ -41,11 +41,11 @@ router.delete('/:id', async (req, res) => {
   try {
     const event = await Event.findByIdAndDelete(req.params.id);
     if (!event) {
-      return res.status(404).json({ message: 'Event not found' });
+      return res.status(404).json({ success: false, message: 'Event not found' });
     }
-    res.status(200).json({ message: 'Event deleted successfully' });
+    res.status(200).json({ success: true, message: 'Event deleted successfully' });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ success: false, error: error.message });
   }
 });
 
