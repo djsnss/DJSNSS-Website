@@ -4,33 +4,41 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Admin from './pages/Admin';
+import AdminWorkPage from './pages/AdminWorkPage';
 import Events from './pages/Events';
 import CheckHours from './pages/CheckHours';
 import HoursComplaint from './pages/HoursComplaint';
 import Volunteer from './pages/Volunteer';
 import VolunteerPolicy from './pages/VolunteerPolicy';
 import EventDetails from './pages/EventDetails';
+import EventRegistration from './pages/EventRegistration';
+import Login from './pages/Login';
 import Footer from './components/Footer';
 import Team from './pages/Team';
+
 const App = () => {
   return (
-    <Router className="flex flex-col">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/volunteer" element={<Volunteer />} />
-        <Route path="/check-hours" element={<CheckHours />} />
-        <Route path="/hours-complaint" element={<HoursComplaint />} />
-        <Route path='/volunteer' element={<VolunteerPolicy />} />
-        <Route path='/eventdetails' element={<EventDetails />} />
-      </Routes>
-      <Footer />
-    </Router>
-  );
-};
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/admin-work" element={<AdminWorkPage />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/check-hours" element={<CheckHours />} />
+          <Route path="/hours-complaint" element={<HoursComplaint />} />
+          <Route path="/volunteer" element={<Volunteer />} />
+          <Route path="/volunteer-policy" element={<VolunteerPolicy />} />
+          <Route path="/event-details" element={<EventDetails />} />
+          <Route path="/event-registration" element={<EventRegistration />} />
+        </Routes>
+        <Footer />
+      </div>
+     </Router>
+  )
+}
 
 export default App;
