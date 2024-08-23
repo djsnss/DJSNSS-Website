@@ -1,3 +1,9 @@
+import GrainAThon from '../assets/Events/GrainAThon.png';
+import BorivaliTP from '../assets/Events/TreePlantation.png'
+import NSSCamp from '../assets/Events/NSSCamp.jpg'
+import AnnualCharity from '../assets/Events/AnnualCharity.png'
+import VoterRegistration from '../assets/Events/VoterRegistration.png'
+import BDD from '../assets/Events/BDD.jpg'
 const MenuLinks = [
   {
     id: 1,
@@ -20,12 +26,7 @@ const MenuLinks = [
     link: 'volunteer',
   },
   {
-    id:5,
-    name: 'Login',
-    link: 'login',
-  },
-  {
-    id: 6,
+    id: 5,
     name: 'Admin',
     link: 'admin',
   },
@@ -67,56 +68,56 @@ export { SocialLinks };
 export const featuresData = [
   {
     id: 1,
-    title: "EDUCATIONAL DRIVE",
-    description: "Shaping India's futures",
-    link: "/eventdetails",
-    background: "bg-green-600",
-    imageURL: "",
-    longDescription: "",
-  },
-  {
-    id: 2,
-    title: "GRAIN-A-THON",
-    description: "Our small actions, others' huge aid",
-    link: "/eventdetails",
-    background: "bg-yellow-600",
-    imageURL: "",
-    longDescription: "",
-  },
-  {
-    id: 3,
-    title: "TREE PLANTATION",
-    description: "Planting trees, planting hope",
-    link: "/eventdetails",
-    background: "bg-blue-600",
-    imageURL: "",
-    longDescription: "",
-  },
-  {
-    id: 4,
     title: "NSS CAMP",
     description: "A camp to remember",
     link: "/eventdetails",
     background: "bg-pink-600",
-    imageURL: "",
+    imageURL: NSSCamp,
     longDescription: "",
   },
   {
-    id: 5,
+    id: 2,
     title: "BLOOD DONATION DRIVE",
     description: "Donate blood, save lives",
     link: "/eventdetails",
     background: "bg-purple-600",
-    imageURL: "",
+    imageURL: BDD,
     longDescription: "",
   },
   {
+    id: 3,
+    title: "GRAIN-A-THON",
+    description: "Our small actions, others' huge aid",
+    link: "/eventdetails",
+    background: "bg-yellow-600",
+    imageURL: GrainAThon,
+    longDescription: "",
+  },
+  {
+    id: 4,
+    title: "TREE PLANTATION",
+    description: "Planting trees, planting hope",
+    link: "/eventdetails",
+    background: "bg-blue-600",
+    imageURL: BorivaliTP,
+    longDescription: "",
+  },
+  {
+    id: 5,
+    title: "ANNUAL CHARITY",
+    description: "Shaping India's futures",
+    link: "/eventdetails",
+    background: "bg-green-600",
+    imageURL: AnnualCharity,
+    longDescription: "From February 20th to 24th, DJ Sanghvi College of Engineering became a center of compassion and creativity during the DJSNSS Annual Charity Drive. This event united volunteers and the college community in a mission to raise funds for specially-abled children.The drive was a resounding success, raising over Rs 75,000 to support three NGOs: Kshitij, based at Charni Road, and Purnavas and VDIS, both in Malad. These funds will significantly aid the organizations in their ongoing efforts to nurture the talents of these children. The event featured a vibrant showcase of handcrafted items made by the children, including handmade chocolates, earrings, anklets, bracelets, and jute bags. Ganpati idols, symbolizing new beginnings, were also on display. Purchasing these items did more than raise funds; it celebrated the talents of these children, affirming their value and creativity. The Annual Charity Drive wasn’t just about raising money—it was a celebration of community spirit and collective kindness. In those five days, DJ Sanghvi College became a place where every contribution helped create a world where everyone’s abilities are recognized. The DJSNSS Annual Charity Drive showed that when we give from the heart, we enrich lives and build a tapestry of kindness that touches us all.",
+  },
+  {
     id: 6,
-    title: "BEACH CLEANUP",
-    description: "Clean the beach, save the ocean",
+    title: "VOTER REGISTRATION",
+    description: "Your vote, your voice",
     link: "/eventdetails",
     background: "bg-red-600",
-    imageURL: "",
+    imageURL: VoterRegistration,
     longDescription: "",
   },
 ];

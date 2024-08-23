@@ -26,12 +26,8 @@ const MultiCardCarousel: React.FC = () => {
   return (
     <div className="w-full h-[80vh] mx-auto flex flex-col justify-center items-center max-w-6xl overflow-hidden">
       <div className="mb-8 p-6 flex items-center justify-center">
-        <h2 className="relative text-zinc-700 text-lg sm:text-3xl font-medium sm:font-semibold bg-gray-200 px-3 sm:px-4 py-1 shadow-gray-600 tracking-wide shadow-md transition-all duration-500 hover:shadow-xl hover:shadow-gray-600 border-gray-200 border-1 z-10">
+        <h2 className="relative rounded-md text-zinc-700 text-lg sm:text-3xl font-medium sm:font-semibold bg-gray-200 px-3 sm:px-4 py-1 shadow-gray-600 tracking-wide shadow-md transition-all duration-500 hover:shadow-xl hover:shadow-gray-600 border-gray-200 border-1 z-10 hover:rounded-2xl">
           <div className="relative z-10">SNEAK PEEK</div>
-          <div className="absolute inset-0 flex items-center justify-between">
-            <div className="border-t-4 border-gray-300 w-[200%] transform -translate-x-5/6 z-0"></div>
-            <div className="border-t-4 border-gray-300 w-[200%] transform translate-x-5/6 z-0"></div>
-          </div>
         </h2>
       </div>
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+import BandraBC from '../assets/Events/BandraBC.png'
 const CustomCarousel = ({ images, captions }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
@@ -44,7 +44,7 @@ const CustomCarousel = ({ images, captions }) => {
 
   return (
     <div
-      className="relative w-full h-[80vh] overflow-hidden"
+      className="relative w-full h-[90vh] overflow-hidden"
       onMouseEnter={stopAutoScroll}
       onMouseLeave={startAutoScroll}
     >
