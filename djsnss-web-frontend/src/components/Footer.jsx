@@ -26,7 +26,7 @@ export function Component() {
   return (
     <Footer bgDark>
       <div className="w-full">
-        <div className="grid bg-white text-black w-full grid-cols-2 gap-8 pl-4 sm:pl-14 py-6 md:grid-cols-4">
+        <div className="grid bg-gray-100 text-black w-full grid-cols-2 gap-8 pl-4 sm:pl-14 py-6 md:grid-cols-4">
           {/* Company Section */}
           <div>
             <FooterTitle className="text-sm sm:text-md md:text-lg pb-3" title="Useful Links" />
@@ -73,7 +73,7 @@ export function Component() {
         </div>
         
         {/* Footer Bottom Section */}
-        <div className="w-full flex-col sm:flex-row bg-white text-black px-4 sm:px-10 pb-6 flex items-center justify-between">
+        <div className="w-full flex-col sm:flex-row bg-gray-100 text-black px-4 sm:px-10 pb-6 flex items-center justify-between">
           <FooterCopyright href="/" by="DJSNSS™" year={2024} />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
             {SocialLinks.map((social) => {

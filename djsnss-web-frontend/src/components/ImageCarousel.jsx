@@ -62,13 +62,13 @@ const CustomCarousel = ({ images, captions }) => {
         ))}
       </div>
       <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-5 hover:bg-gray-500 rounded-full"
         onClick={prevImage}
       >
         &#10094;
       </button>
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-5 hover:bg-gray-500 rounded-full"
         onClick={nextImage}
       >
         &#10095;

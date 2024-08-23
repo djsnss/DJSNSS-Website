@@ -1,18 +1,23 @@
 import { Link } from 'react-router-dom';
 import { featuresData } from '../data/index';
 import logo from '../assets/DJSLogo.png';
-import College from '../assets/College.avif';
 import CorePic from '../assets/Core.jpg';
 import ImageCarousel from '../components/ImageCarousel';
 import SneakPeek from '../components/SneakPeek';
 import Faculty_Team from '../components/Faculty_Team';
 
-import BandraBC from '../assets/Events/BandraBC.png'
-import CyberSavvy from '../assets/Events/CyberSavvy.png'
-import AntiDowry from '../assets/Events/AntiDowry.png'
-import yarana1 from '../assets/Events/Yaarana/yarana1.jpg'
+import BandraBC from '../assets/Events/BandraBC.png';
+import CyberSavvy from '../assets/Events/CyberSavvy.png';
+import AntiDowry from '../assets/Events/AntiDowry.png';
+import yarana1 from '../assets/Events/Yaarana/yarana1.jpg';
+
 const images = [BandraBC, yarana1, CyberSavvy, AntiDowry];
-const captions = ['Bandra Beach Cleanup', 'Friendship Day with Kids', 'CyberSavvy: CyberSecurity Teaching to Kids', 'Anti Dowry Awareness Event'];
+const captions = [
+  'Bandra Beach Cleanup',
+  'Friendship Day with Kids',
+  'CyberSavvy: CyberSecurity Teaching to Kids',
+  'Anti Dowry Awareness Event',
+];
 
 const Home = () => {
   const getWidthClasses = (index, length) => {
@@ -24,8 +29,11 @@ const Home = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="w-full h-screen bg-cover bg-center" style={{ backgroundImage: `url(${CorePic})` }}>
-        <div className="w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center">
+      <div
+        className="w-full h-screen bg-cover bg-center"
+        style={{ backgroundImage: `url(${CorePic})` }}
+      >
+        <div className="w-full h-full bg-black bg-opacity-30 flex flex-col items-center justify-center">
           <img src={logo} alt="NSS IIT Delhi" className="h-20 w-20 mb-10" />
           <h1 className="text-xl md:text-5xl sm:text-3xl font-bold mb-10 mx-2 text-center text-white">
             NSS Dwarkadas J. Sanghvi College of Engineering
@@ -47,22 +55,23 @@ const Home = () => {
             >
               {/* Background image with dark overlay */}
               <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-500"
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-500 opacity-70 group-hover:opacity-100"
                 style={{
                   backgroundImage: `url(${feature.imageURL})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  opacity: 0.8,
                 }}
               ></div>
 
+              {/* Color overlay that fades out on hover */}
               <div
                 className={`absolute inset-0 ${feature.background} opacity-50 group-hover:opacity-0 transition-opacity duration-500`}
               ></div>
 
-              <div className="relative z-10 text-center text-white">
+              {/* Content with hover effect for background */}
+              <div className="relative z-10 text-center text-slate-800 group-hover:bg-white group-hover:bg-opacity-50 p-5 transition duration-500">
                 <h2 className="text-2xl font-bold mb-4">{feature.title}</h2>
-                <div className="w-full mx-auto border-white mb-2 border-b-4"></div>
+                <div className="w-full mx-auto border-slate-800 mb-2 border-b-4"></div>
                 <p className="mb-1">{feature.description}</p>
                 <Link to={feature.link} className="hover:text-blue-500 font-semibold">
                   View Details &rarr;
@@ -72,6 +81,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+
 
       {/* Additional Sections */}
       <SneakPeek />

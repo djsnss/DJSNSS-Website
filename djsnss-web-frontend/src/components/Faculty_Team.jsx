@@ -13,8 +13,11 @@ const Faculty_Team = () => {
         </p>
       </div>
       <div className='flex flex-col justify-center items-center text-gray-800'>
-        <h1 className='text-xl sm:text-3xl font-medium sm:font-semibold p-2 text-gray-600'>Our Legacy</h1>
-        <div className='w-1/2 border-2 border-gray-600'></div>
+      <div className="mb-8 p-6 flex items-center justify-center">
+        <h2 className="relative rounded-md text-zinc-700 text-lg sm:text-3xl font-medium sm:font-semibold bg-gray-200 px-3 sm:px-4 py-1 shadow-gray-600 tracking-wide shadow-md transition-all duration-500 hover:shadow-xl hover:shadow-gray-600 border-gray-200 border-1 z-10 hover:rounded-2xl">
+          <div className="relative z-10">OUR LEGACY</div>
+        </h2>
+        </div>
         <div className="flex flex-wrap max-w-3xl items-center justify-center">
           {TeamYearLinks.map((teamYearLink) => (
             <>

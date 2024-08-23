@@ -36,7 +36,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 ${isScrolled ? 'bg-white shadow-md shadow-opacity-50 shadow-black' : 'bg-white shadow-md shadow-opacity-50 shadow-black'} transition duration-300`}>
+    <nav className={`fixed top-0 w-full z-50 ${isScrolled ? 'bg-white shadow-md shadow-opacity-50 shadow-black' : 'bg-white'} transition duration-300`}>
       <div className="container mx-auto flex lg:justify-evenly justify-between items-center p-4">
         <div className='flex justify-start items-center '>
           <Link to="/" className="text-xl font-bold text-gray-800 items-center flex">

@@ -14,14 +14,16 @@ import EventDetails from './pages/EventDetails';
 import EventRegistration from './pages/EventRegistration';
 import Login from './pages/Login';
 import Footer from './components/Footer';
+import AdminLogin from './pages/AdminLogin';
 import Team from './pages/Team';
 
 const App = () => {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col justify-between h-screen">
         <Navbar />
         <Routes>
+          <Route path="/team" element={<Team />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/admin" element={<Admin />} />
@@ -32,12 +34,13 @@ const App = () => {
           <Route path="/hours-complaint" element={<HoursComplaint />} />
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/volunteer-policy" element={<VolunteerPolicy />} />
-          <Route path="/event-details" element={<EventDetails />} />
+          <Route path="/eventdetails/:slug" element={<EventDetails />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/event-registration" element={<EventRegistration />} />
         </Routes>
         <Footer />
       </div>
-     </Router>
+    </Router>
   )
 }
 
