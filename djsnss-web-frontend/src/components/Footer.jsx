@@ -54,9 +54,8 @@ export function Component() {
           <div>
             <FooterTitle className="text-sm sm:text-md md:text-lg pb-3" title="Legal" />
             <FooterLinkGroup col>
-              <FooterLink href="#">Privacy Policy</FooterLink>
-              <FooterLink href="#">Licensing</FooterLink>
-              <FooterLink href="#">Terms &amp; Conditions</FooterLink>
+              <FooterLink href="/volunteer-policy">Volunteer Policy</FooterLink>
+              <FooterLink href="/license">Licensing</FooterLink>
             </FooterLinkGroup>
           </div>
           

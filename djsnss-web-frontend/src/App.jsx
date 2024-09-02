@@ -13,6 +13,7 @@ import VolunteerPolicy from './pages/VolunteerPolicy';
 import EventDetails from './pages/EventDetails';
 import EventRegistration from './pages/EventRegistration';
 import Login from './pages/Login';
+import License from './pages/License';
 import Footer from './components/Footer';
 import AdminLogin from './pages/AdminLogin';
 import Team from './pages/Team';
@@ -24,6 +25,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/team" element={<Team />} />
+          <Route path="/license" element={<License />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/admin" element={<Admin />} />
