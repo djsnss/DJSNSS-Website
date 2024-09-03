@@ -46,7 +46,7 @@ const Navbar = () => {
         </div>
         <div className="hidden lg:flex space-x-6 items-center">
           {MenuLinks.map((link) => (
-            <Link key={link.id} to={`/${link.link}`} className="text-gray-600 hover:text-black font-semibold">
+            <Link key={link.id} to={`/${link.link}`} className="text-gray-600 text-lg hover:text-black font-semibold">
               {link.name}
             </Link>
           ))}

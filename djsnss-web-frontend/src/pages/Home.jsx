@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { gsap } from 'gsap';
+import { Link } from 'react-router-dom';
 import logo from '../assets/DJSLogo.png';
+import CorePic from '../assets/Core.jpg';
 import ImageCarousel from '../components/ImageCarousel';
 import SneakPeek from '../components/SneakPeek';
 import Faculty_Team from '../components/Faculty_Team';
+
 import BandraBC from '../assets/Events/BandraBC.png';
 import CyberSavvy from '../assets/Events/CyberSavvy.png';
 import AntiDowry from '../assets/Events/AntiDowry.png';
@@ -21,63 +21,84 @@ const captions = [
 ];
 
 const Home = () => {
-  const treeRef = useRef(null);
-
-  useEffect(() => {
-    // GSAP blooming tree animation
-    gsap.fromTo(treeRef.current, 
-      { scale: 0.5, opacity: 0 }, 
-      { scale: 1, opacity: 1, duration: 2, ease: 'power3.out' }
-    );
-  }, []);
-
   return (
     <div className="flex flex-col">
-      {/* Parallax background with GSAP animated tree */}
-      <div
-        className="relative w-full h-screen overflow-hidden bg-white"
-        style={{ background: 'url(/path/to/your/tree_background.png) no-repeat center/cover' }}
+      {/* Parallax Section */}
+      <motion.div 
+        className="w-full h-screen bg-cover bg-fixed bg-center"
+        style={{ backgroundImage: `url(${CorePic})` }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
       >
-        <motion.div
-          className="absolute inset-0 flex flex-col items-center justify-center"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <img src={logo} alt="NSS IIT Delhi" className="h-20 w-20 mb-5" />
-
+        <div className="w-full h-full bg-black bg-opacity-30 flex flex-col items-center justify-center">
+          <motion.img
+            src={logo}
+            alt="NSS IIT Delhi"
+            className="h-20 w-20 mb-10"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.2 }}
+          />
           <motion.h1
-            className="text-3xl md:text-5xl font-bold text-center text-gray-800"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
+            className="text-xl md:text-5xl sm:text-3xl font-bold mb-10 mx-2 text-center text-white"
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1.5 }}
           >
             NSS Dwarkadas J. Sanghvi College of Engineering
           </motion.h1>
-
           <motion.p
-            className="text-md md:text-2xl text-center text-gray-600 mt-2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
+            className="text-md md:text-2xl text-center text-white"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1.5 }}
           >
+            <div className="w-full border-white mb-5 border-b-4"></div>
             FOR YOU, WITH YOU, ALWAYS!
           </motion.p>
-
-          {/* GSAP Tree Animation */}
-          <div ref={treeRef} className="tree-animation mt-10">
-            <img src="/path/to/tree_image.png" alt="Blooming Tree" className="max-w-xs sm:max-w-sm" />
-          </div>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
 
       {/* Features Section */}
-      <Features />
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <Features />
+      </motion.div>
 
-      {/* Additional Sections */}
-      <SneakPeek />
-      <Faculty_Team />
-      <ImageCarousel images={images} captions={captions} />
+      {/* Sneak Peek Section */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <SneakPeek />
+      </motion.div>
+
+      {/* Faculty Team Section */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <Faculty_Team />
+      </motion.div>
+
+      {/* Image Carousel */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <ImageCarousel images={images} captions={captions} />
+      </motion.div>
     </div>
   );
 };

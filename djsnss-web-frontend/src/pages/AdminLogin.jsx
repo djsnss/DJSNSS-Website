@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 
 const AdminLogin = () => {
@@ -34,11 +35,24 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className='flex flex-col h-[80vh]'>
+    <div className='flex flex-col h-[80vh] bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500'>
       <div className="container mx-auto p-4 mt-20 max-w-md">
-        <h1 className="text-3xl font-bold text-gray-800 mb-6">Admin Login</h1>
+        <motion.h1
+          className="text-3xl font-bold text-white mb-6"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          Admin Login
+        </motion.h1>
         {error && <p className="text-red-500 mb-4">{error}</p>}
-        <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6">
+        <motion.form
+          onSubmit={handleSubmit}
+          className="bg-white shadow-md rounded-lg p-6"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+        >
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email</label>
             <input
@@ -61,13 +75,15 @@ const AdminLogin = () => {
               className="border rounded-lg py-2 px-3 text-gray-700 w-full"
             />
           </div>
-          <button
+          <motion.button
             type="submit"
             className="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             Login
-          </button>
-        </form>
+          </motion.button>
+        </motion.form>
       </div>
     </div>
   );
