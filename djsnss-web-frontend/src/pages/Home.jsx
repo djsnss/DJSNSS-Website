@@ -1,15 +1,16 @@
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { featuresData } from '../data/index';
+import { motion } from 'framer-motion';
+import { gsap } from 'gsap';
 import logo from '../assets/DJSLogo.png';
-import CorePic from '../assets/Core.jpg';
 import ImageCarousel from '../components/ImageCarousel';
 import SneakPeek from '../components/SneakPeek';
 import Faculty_Team from '../components/Faculty_Team';
-
 import BandraBC from '../assets/Events/BandraBC.png';
 import CyberSavvy from '../assets/Events/CyberSavvy.png';
 import AntiDowry from '../assets/Events/AntiDowry.png';
 import yarana1 from '../assets/Events/Yaarana/yarana1.jpg';
+import Features from '../components/Features';
 
 const images = [BandraBC, yarana1, CyberSavvy, AntiDowry];
 const captions = [
@@ -20,68 +21,58 @@ const captions = [
 ];
 
 const Home = () => {
-  const getWidthClasses = (index, length) => {
-    if (index === length - 1 && length % 2 !== 0) {
-      return 'w-full';
-    }
-    return index % 4 === 0 || index % 4 === 3 ? 'w-full md:w-2/3' : 'w-full md:w-1/3';
-  };
+  const treeRef = useRef(null);
+
+  useEffect(() => {
+    // GSAP blooming tree animation
+    gsap.fromTo(treeRef.current, 
+      { scale: 0.5, opacity: 0 }, 
+      { scale: 1, opacity: 1, duration: 2, ease: 'power3.out' }
+    );
+  }, []);
 
   return (
     <div className="flex flex-col">
+      {/* Parallax background with GSAP animated tree */}
       <div
-        className="w-full h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url(${CorePic})` }}
+        className="relative w-full h-screen overflow-hidden bg-white"
+        style={{ background: 'url(/path/to/your/tree_background.png) no-repeat center/cover' }}
       >
-        <div className="w-full h-full bg-black bg-opacity-30 flex flex-col items-center justify-center">
-          <img src={logo} alt="NSS IIT Delhi" className="h-20 w-20 mb-10" />
-          <h1 className="text-xl md:text-5xl sm:text-3xl font-bold mb-10 mx-2 text-center text-white">
+        <motion.div
+          className="absolute inset-0 flex flex-col items-center justify-center"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <img src={logo} alt="NSS IIT Delhi" className="h-20 w-20 mb-5" />
+
+          <motion.h1
+            className="text-3xl md:text-5xl font-bold text-center text-gray-800"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
+          >
             NSS Dwarkadas J. Sanghvi College of Engineering
-          </h1>
-          <p className="text-md md:text-2xl text-center text-white">
-            <div className="w-full border-white mb-5 border-b-4"></div>
+          </motion.h1>
+
+          <motion.p
+            className="text-md md:text-2xl text-center text-gray-600 mt-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 1 }}
+          >
             FOR YOU, WITH YOU, ALWAYS!
-          </p>
-        </div>
+          </motion.p>
+
+          {/* GSAP Tree Animation */}
+          <div ref={treeRef} className="tree-animation mt-10">
+            <img src="/path/to/tree_image.png" alt="Blooming Tree" className="max-w-xs sm:max-w-sm" />
+          </div>
+        </motion.div>
       </div>
 
       {/* Features Section */}
-      <div className="bg-gray-100 w-full">
-        <div className="flex flex-wrap">
-          {featuresData.map((feature, index) => (
-            <div
-              key={feature.id}
-              className={`${getWidthClasses(index, featuresData.length)} relative py-24 flex flex-col justify-center items-center transition-all duration-500 ease-in-out group`}
-            >
-              {/* Background image with dark overlay */}
-              <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-500 opacity-70 group-hover:opacity-100"
-                style={{
-                  backgroundImage: `url(${feature.imageURL})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              ></div>
-
-              {/* Color overlay that fades out on hover */}
-              <div
-                className={`absolute inset-0 ${feature.background} opacity-50 group-hover:opacity-0 transition-opacity duration-500`}
-              ></div>
-
-              {/* Content with hover effect for background */}
-              <div className="relative z-10 text-center text-slate-800 group-hover:bg-white group-hover:bg-opacity-50 p-5 transition duration-500">
-                <h2 className="text-2xl font-bold mb-4">{feature.title}</h2>
-                <div className="w-full mx-auto border-slate-800 mb-2 border-b-4"></div>
-                <p className="mb-1">{feature.description}</p>
-                <Link to={feature.link} className="hover:text-blue-500 font-semibold">
-                  View Details &rarr;
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
+      <Features />
 
       {/* Additional Sections */}
       <SneakPeek />
