@@ -1,10 +1,14 @@
 import { useParams } from 'react-router-dom';
-import { featuresData } from '../data/index';
 import { motion } from 'framer-motion';
+import { largeEventsData } from '../data/largeEvents';
+// Import other event data arrays
+import { universityEventsData } from '../data/universityEvents';
+// Combine all event data arrays
+const allEventsData = [...largeEventsData, ...universityEventsData /* Add more arrays as needed */];
 
 const EventDetails = () => {
   const { slug } = useParams();
-  const eventDetail = featuresData.find((feature) => feature.slug === slug);
+  const eventDetail = allEventsData.find((event) => event.slug === slug);
 
   return (
     <div className="flex flex-col items-center justify-center pt-20">

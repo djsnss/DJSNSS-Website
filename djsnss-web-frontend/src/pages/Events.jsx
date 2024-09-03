@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import LargeEvents from '../components/LargeEvents';
+import UniversityEvents from '../components/UniversityEvents';
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -48,7 +49,31 @@ const Events = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
+          <h1 className="text-3xl font-bold text-gray-800 m-6">Large Events</h1>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
           <LargeEvents />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <h1 className="text-3xl font-bold text-gray-800 m-6">University Events</h1>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <UniversityEvents />
         </motion.div>
       </div>
     </div>
