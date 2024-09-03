@@ -10,7 +10,6 @@ import BandraBC from '../assets/Events/BandraBC.png';
 import CyberSavvy from '../assets/Events/CyberSavvy.png';
 import AntiDowry from '../assets/Events/AntiDowry.png';
 import yarana1 from '../assets/Events/Yaarana/yarana1.jpg';
-import Features from '../components/Features';
 
 const images = [BandraBC, yarana1, CyberSavvy, AntiDowry];
 const captions = [
@@ -58,16 +57,6 @@ const Home = () => {
             FOR YOU, WITH YOU, ALWAYS!
           </motion.p>
         </div>
-      </motion.div>
-
-      {/* Features Section */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <Features />
       </motion.div>
 
       {/* Sneak Peek Section */}
