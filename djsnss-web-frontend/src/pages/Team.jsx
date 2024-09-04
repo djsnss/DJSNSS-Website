@@ -33,7 +33,7 @@ const Team = () => {
           <h3 className="text-lg sm:text-xl lg:text-2xl font-medium text-center">Principal</h3>
           <div className="flex flex-wrap justify-center items-center p-2 gap-4 sm:gap-8">
             {teamData.faculty?.Principal?.map((name, idx) => (
-              <div key={idx} className="rounded-xl border-gray-200 shadow-gray-700 bg-gray-300 hover:scale-105 duration-300 shadow-lg border-2 w-[40vw] sm:w-[20vw] p-4 sm:p-8">
+              <div key={idx} className="rounded-xl border-gray-200 shadow-gray-700 bg-gray-300 hover:scale-105 duration-300 shadow-lg border-2 w-[80vw] sm:w-[20vw] p-4 sm:p-8">
                 <img
                   src="https://images.unsplash.com/photo-1557683316-973673baf926"
                   alt={name}
@@ -49,7 +49,7 @@ const Team = () => {
           <h3 className="text-lg sm:text-xl lg:text-2xl font-medium text-center">Program Officers</h3>
           <div className="flex flex-wrap justify-center items-center p-2 gap-4 sm:gap-8">
             {teamData.faculty?.ProgramOfficers?.map((name, idx) => (
-              <div key={idx} className="rounded-xl border-gray-200 shadow-gray-700 bg-gray-300 hover:scale-105 duration-300 shadow-lg border-2 w-[40vw] sm:w-[20vw] p-4 sm:p-8">
+              <div key={idx} className="rounded-xl border-gray-200 shadow-gray-700 bg-gray-300 hover:scale-105 duration-300 shadow-lg border-2 w-[80vw] sm:w-[20vw] p-4 sm:p-8">
                 <img
                   src="https://images.unsplash.com/photo-1557683316-973673baf926"
                   alt={name}

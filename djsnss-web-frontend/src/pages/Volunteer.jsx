@@ -7,7 +7,7 @@ const Volunteer = () => {
     <div className="bg-gradient-to-r w-full from-blue-300 to-purple-300 text-white flex flex-col">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className="mt-20 mx-auto p-6 lg:p-12 max-w-6xl"
       >
@@ -75,7 +75,7 @@ const Volunteer = () => {
         </div>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="bg-white p-8 rounded-lg shadow-lg mb-12"
         >
@@ -107,7 +107,7 @@ const Volunteer = () => {
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="text-center mb-12"
         >
@@ -121,7 +121,7 @@ const Volunteer = () => {
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="bg-white p-8 rounded-lg shadow-lg mb-12"
         >
@@ -141,7 +141,7 @@ const Volunteer = () => {
         {/* Notable People & Inspirational Stories Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="bg-gray-100 p-8 rounded-lg shadow-lg mb-12"
         >
@@ -186,7 +186,7 @@ const Volunteer = () => {
         {/* Connecting with Nature & Rural India Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="bg-gray-100 p-8 rounded-lg shadow-lg mb-12"
         >
@@ -203,7 +203,7 @@ const Volunteer = () => {
         {/* Government Schemes Promoting Social Work */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="bg-gray-100 p-8 rounded-lg shadow-lg mb-12"
         >

@@ -11,6 +11,8 @@ import CyberSavvy from '../assets/Events/CyberSavvy.png';
 import AntiDowry from '../assets/Events/AntiDowry.png';
 import yarana1 from '../assets/Events/Yaarana/yarana1.jpg';
 
+import VolunteerHomePage from '../components/VolunteerHomePage';
+import VolunteerPolicy from './VolunteerPolicy';
 const images = [BandraBC, yarana1, CyberSavvy, AntiDowry];
 const captions = [
   'Bandra Beach Cleanup',
@@ -23,7 +25,7 @@ const Home = () => {
   return (
     <div className="flex flex-col">
       {/* Parallax Section */}
-      <motion.div 
+      <motion.div
         className="w-full h-screen bg-cover bg-fixed bg-center"
         style={{ backgroundImage: `url(${CorePic})` }}
         initial={{ opacity: 0 }}
@@ -67,6 +69,16 @@ const Home = () => {
         viewport={{ once: true }}
       >
         <SneakPeek />
+      </motion.div>
+
+      {/* Volunteer Section */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <VolunteerHomePage />
       </motion.div>
 
       {/* Faculty Team Section */}

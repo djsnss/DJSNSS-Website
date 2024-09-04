@@ -32,7 +32,8 @@ const Faculty_Team = () => {
       {/* Team Description */}
       <div className="flex flex-col items-center max-w-4xl">
         <p className="text-center text-sm sm:text-md md:text-lg font-normal mb-4">
-          Learn more about the faculty team for the year {year}.
+          DJS NSS, the NSS unit of Dwarkadas J. Sanghvi College of Engineering, commenced their journey in 2005. Our mission is to foster the all-round development of society, addressing socio-economic problems and sustainability crises caused by global warming. We aim to transform individuals into resilient and capable citizens, encouraging both technical advancements and societal contributions. <br /><br />
+          Our activities include regular meetings, organizing events, and forging lifelong connections among volunteers. We strive to connect with nature and rural areas, providing holistic development and opportunities for personal growth.
         </p>
       </div>
 

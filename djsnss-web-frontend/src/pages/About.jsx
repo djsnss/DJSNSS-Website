@@ -1,14 +1,16 @@
 import { motion } from 'framer-motion';
 import '../css/About.css';
 import Faculty_Team from '../components/Faculty_Team';
-
+import Image1 from '../assets/Events/Yaarana/IMG_1628.jpg'
+import UniversityEvents from '../components/AboutUsCarousel';
+import LocalEvents from '../components/AboutUsCarousel2';
 const About = () => {
   return (
     <div className='flex flex-col bg-gradient-to-r pt-12 from-pink-200 to-blue-300 text-gray-800'>
       <div className="max-w-7xl mx-auto p-6 lg:p-12">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-8"
         >
@@ -17,25 +19,41 @@ const About = () => {
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="bg-white p-6 md:p-8 lg:p-12 rounded-lg shadow-lg mb-12"
         >
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-6 font-cursive">
             Our Mission and Vision
           </h2>
-          <p className="text-base md:text-lg lg:text-xl mb-4">
-            DJS NSS, the NSS unit of Dwarkadas J. Sanghvi College of Engineering, commenced their journey in 2005. Our mission is to foster the all-round development of society, addressing socio-economic problems and sustainability crises caused by global warming. We aim to transform individuals into resilient and capable citizens, encouraging both technical advancements and societal contributions.
-          </p>
-          <p className="text-base md:text-lg lg:text-xl mb-4">
-            Our activities include regular meetings, organizing events, and forging lifelong connections among volunteers. We strive to connect with nature and rural areas, providing holistic development and opportunities for personal growth.
-          </p>
+          <div className='flex flex-grow flex-col lg:flex-row'>
+            <div>
+              <p className="text-base md:text-lg lg:text-xl mb-4">
+                DJS NSS, the NSS unit of Dwarkadas J. Sanghvi College of Engineering, commenced their journey in 2005. Our mission is to foster the all-round development of society, addressing socio-economic problems and sustainability crises caused by global warming. We aim to transform individuals into resilient and capable citizens, encouraging both technical advancements and societal contributions.
+              </p>
+              <p className="text-base hidden lg:block md:text-lg lg:text-xl mb-4">
+                Our activities include regular meetings, organizing events, and forging lifelong connections among volunteers. We strive to connect with nature and rural areas, providing holistic development and opportunities for personal growth.
+              </p>
+            </div>
+            <img src={Image1} alt="NSS Event" className="w-full h-80 object-cover rounded-lg" />
+            <p className="text-base block lg:hidden md:text-lg lg:text-xl mb-4">
+              Our activities include regular meetings, organizing events, and forging lifelong connections among volunteers. We strive to connect with nature and rural areas, providing holistic development and opportunities for personal growth.
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
+          <UniversityEvents />
         </motion.div>
 
         {/* Principal&apos;s Desk */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="bg-white p-6 md:p-8 lg:p-12 rounded-lg shadow-lg mb-12 flex flex-col lg:flex-row items-start gap-8"
         >
@@ -59,7 +77,7 @@ const About = () => {
         {/* Program Officer&apos;s Desk - Vyankatesh Bagal */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="bg-white p-6 md:p-8 lg:p-12 rounded-lg shadow-lg mb-12 flex flex-col lg:flex-row items-start gap-8"
         >
@@ -87,7 +105,7 @@ const About = () => {
         {/* Program Officer&apos;s Desk - Rahul Taware */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="bg-white p-6 md:p-8 lg:p-12 rounded-lg shadow-lg mb-12 flex flex-col lg:flex-row items-start gap-8"
         >
@@ -111,7 +129,7 @@ const About = () => {
         {/* Program Officer&apos;s Desk - Alisha Banz */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="bg-white p-6 md:p-8 lg:p-12 rounded-lg shadow-lg mb-12 flex flex-col lg:flex-row items-start gap-8"
         >
@@ -136,10 +154,18 @@ const About = () => {
           </div>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
+          <LocalEvents />
+        </motion.div>
+
         {/* Core Team */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="bg-white p-6 md:p-8 lg:p-12 rounded-lg shadow-lg mb-12"
         >
@@ -183,7 +209,7 @@ const About = () => {
         {/* Our Team */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="bg-white p-6 md:p-8 lg:p-12 rounded-lg shadow-lg mb-12"
         >

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { universityEventsData } from '../data/universityEvents';
+import { localEventsData } from '../data/localEvents';
 
 const Features = () => {
   const [dragConstraint, setDragConstraint] = useState(0);
@@ -18,7 +18,7 @@ const Features = () => {
   useEffect(() => {
     const calculateDragConstraint = () => {
       const containerWidth = containerRef.current.offsetWidth;
-      const totalWidth = universityEventsData.length * (cardWidth + gap + 70);
+      const totalWidth = localEventsData.length * (cardWidth + gap + 70);
       const constraint = -(totalWidth - containerWidth + gap);
       setDragConstraint(constraint);
     };
@@ -33,9 +33,13 @@ const Features = () => {
   }, [cardWidth, gap]);
 
   return (
-    <div className="relative w-full bg-gradient-to-tl to-blue-400 from-emerald-400 py-8 overflow-hidden">
+    <div className="relative w-full bg-transparent py-8 my-5 rounded-xl overflow-hidden">
+      <div className='text-center text-lg font-bold text-white md:text-2xl mb-5'>
+        <h1 className="text-3xl font-bold text-gray-800">Area Level Events</h1>
+      </div>
+
       {/* Container for the cards */}
-      <div className="flex overflow-x-scroll snap-end snap-mandatory space-x-4 px-4 md:px-8 scrollbar-hide" ref={containerRef}>
+      <div className="flex overflow-x-scroll snap-start snap-mandatory space-x-4 scrollbar-hide" ref={containerRef}>
         <motion.div
           className="flex space-x-4"
           drag="x"
@@ -45,7 +49,7 @@ const Features = () => {
           animate="visible"
           transition={{ staggerChildren: 0.2 }}
         >
-          {universityEventsData.map((event) => (
+          {localEventsData.map((event) => (
             <motion.div
               key={event.id}
               className="snap-start flex-shrink-0 w-64 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 p-4 flex flex-col justify-center items-center bg-white rounded-lg shadow-lg relative"
