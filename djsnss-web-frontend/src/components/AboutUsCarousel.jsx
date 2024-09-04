@@ -12,15 +12,27 @@ const Features = () => {
     hidden: { opacity: 0, scale: 0.8 },
   };
 
-  const cardWidth = 320; // Adjust card width to match the actual width
+  const cardWidths = {
+    base: 260, // Base card width for small screens
+    sm: 320,  // Card width for small to medium screens
+    md: 380,  // Card width for medium screens and above
+  };
+
   const gap = 16; // Gap between cards
 
   useEffect(() => {
     const calculateDragConstraint = () => {
       const containerWidth = containerRef.current.offsetWidth;
-      const totalWidth = universityEventsData.length * (cardWidth + gap + 70);
+      const cardWidth = getCardWidth(); // Get appropriate card width based on screen size
+      const totalWidth = universityEventsData.length * (cardWidth + gap);
       const constraint = -(totalWidth - containerWidth + gap);
       setDragConstraint(constraint);
+    };
+
+    const getCardWidth = () => {
+      if (window.innerWidth >= 768) return cardWidths.md;
+      if (window.innerWidth >= 640) return cardWidths.sm;
+      return cardWidths.base;
     };
 
     // Calculate on mount and when window resizes
@@ -30,10 +42,10 @@ const Features = () => {
     return () => {
       window.removeEventListener('resize', calculateDragConstraint);
     };
-  }, [cardWidth, gap]);
+  }, [gap]);
 
   return (
-    <div className="relative w-full bg-transparent py-8 my-5 rounded-xl overflow-hidden">
+    <div className="relative w-full bg-transparent py-8 my-5 rounded-xl overflow-x-hidden">
       <div className='text-center text-lg font-bold text-white md:text-2xl mb-5'>
         <h1 className="text-3xl font-bold text-gray-800">University Events</h1>
       </div>
@@ -52,7 +64,7 @@ const Features = () => {
           {universityEventsData.map((event) => (
             <motion.div
               key={event.id}
-              className="snap-start flex-shrink-0 w-64 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 p-4 flex flex-col justify-center items-center bg-white rounded-lg shadow-lg relative"
+              className="snap-start flex-shrink-0 w-64 sm:w-80 md:w-96 h-64 sm:h-72 md:h-80 lg:h-96 p-4 flex flex-col justify-center items-center bg-white rounded-lg shadow-lg relative"
               variants={cardVariants}
               transition={{ duration: 0.8, ease: 'easeInOut' }}
             >
@@ -68,8 +80,8 @@ const Features = () => {
 
               {/* Content */}
               <div className="relative z-10 text-center p-4 bg-opacity-75 bg-white rounded-lg">
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">{event.title}</h2>
-                <p className="mb-4 text-sm sm:text-base">{event.description}</p>
+                <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-2">{event.title}</h2>
+                <p className="mb-4 text-xs sm:text-sm md:text-base">{event.description}</p>
                 <Link
                   to={event.link}
                   className="inline-block mt-4 text-blue-500 font-semibold hover:underline"

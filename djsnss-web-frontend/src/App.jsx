@@ -29,7 +29,7 @@ const App = () => {
       <div className="flex flex-col justify-between h-screen">
         <Navbar />
         <ScrollToTop />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div className='text-center pt-30 text-4xl'>Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />

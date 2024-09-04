@@ -42,13 +42,13 @@ const About = () => {
           </div>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <UniversityEvents />
-        </motion.div>
+        </motion.div> */}
 
         {/* Principal&apos;s Desk */}
         <motion.div
@@ -154,13 +154,13 @@ const About = () => {
           </div>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <LocalEvents />
-        </motion.div>
+        </motion.div> */}
 
         {/* Core Team */}
         <motion.div

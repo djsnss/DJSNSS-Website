@@ -81,7 +81,7 @@ const Navbar = () => {
         onClick={toggleMenu}
       />
       <div
-        className={`fixed inset-y-0 left-0 w-64 bg-white p-4 transform transition-transform duration-300 z-50 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+        className={`fixed inset-y-0 left-0 w-full bg-white p-4 transform transition-transform duration-300 z-50 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
         <button onClick={toggleMenu} className="text-gray-800 focus:outline-none mb-4">
           <svg
@@ -108,14 +108,14 @@ const Navbar = () => {
           ))}
           <Link
             to="/check-hours"
-            className="bg-blue-500 text-white py-2 px-4 rounded-full text-center"
+            className="bg-blue-500 text-white max-w-[200px] py-2 px-4 rounded-full text-center"
             onClick={toggleMenu}
           >
             Check Hours
           </Link>
           <Link
             to="/hours-complaint"
-            className="bg-blue-500 text-white py-2 px-4 rounded-full text-center"
+            className="bg-blue-500 text-white py-2 max-w-[200px] px-4 rounded-full text-center"
             onClick={toggleMenu}
           >
             Hours Complaint
