@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { universityEventsData } from '../data/universityEvents';
+import { localEventsData } from '../data/localEvents';
 
 const Features = () => {
   const cardVariants = {
@@ -12,7 +12,7 @@ const Features = () => {
   const gap = 16; // Gap between cards
 
   // Calculate drag constraint based on the number of cards and gaps
-  const totalWidth = (universityEventsData.length * (cardWidth + gap));
+  const totalWidth = (localEventsData.length * (cardWidth + gap));
   const dragConstraint = -(totalWidth - window.innerWidth + gap);
 
   return (
@@ -27,7 +27,7 @@ const Features = () => {
           animate="visible"
           transition={{ staggerChildren: 0.2 }}
         >
-          {universityEventsData.map((event) => (
+          {localEventsData.map((event) => (
             <motion.div
               key={event.id}
               className="snap-start ml-4 flex-shrink-0 w-64 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 p-4 flex flex-col justify-center items-center bg-white rounded-lg shadow-lg relative"

@@ -1,7 +1,7 @@
 export const universityEventsData = [
     {
       id: 1,
-      title: "MANN KI BAAT",
+      title: "Mann Ki Baat",
       description: "A nationwide interaction",
       slug: "mann-ki-baat",
       link: "/eventdetails/mann-ki-baat",
@@ -15,7 +15,7 @@ export const universityEventsData = [
     },
     {
       id: 2,
-      title: "LAXMANRAO INAMDAAR MEMORIAL LECTURE",
+      title: "Laxmarao Inaamdaar Memorial Lecture",
       description: "In honor of a great visionary",
       slug: "laxmanrao-inamdaar-memorial-lecture",
       link: "/eventdetails/laxmanrao-inamdaar-memorial-lecture",
@@ -29,7 +29,7 @@ export const universityEventsData = [
     },
     {
       id: 3,
-      title: "SWACCHATA HI SEVA",
+      title: "Swachhata hi Seva",
       description: "Cleanliness is service",
       slug: "swacchata-hi-seva",
       link: "/eventdetails/swacchata-hi-seva",
@@ -43,7 +43,7 @@ export const universityEventsData = [
     },
     {
       id: 4,
-      title: "GANDHI JAYANTI BHAJAN SANDHYA",
+      title: "Gandhi Jayanti Bhajan Sandhya",
       description: "A tribute to Mahatma Gandhi",
       slug: "gandhi-jayanti-bhajan-sandhya",
       link: "/eventdetails/gandhi-jayanti-bhajan-sandhya",
@@ -57,7 +57,7 @@ export const universityEventsData = [
     },
     {
       id: 5,
-      title: "MERI MATI MERA DESH",
+      title: "Mera Desh Meri Mati",
       description: "Honoring our land and heritage",
       slug: "meri-mati-mera-desh",
       link: "/eventdetails/meri-mati-mera-desh",
@@ -71,7 +71,7 @@ export const universityEventsData = [
     },
     {
       id: 6,
-      title: "ANTI DOWRY RALLY",
+      title: "Anti Dowry Rally",
       description: "Rally against the dowry system",
       slug: "anti-dowry-rally",
       link: "/eventdetails/anti-dowry-rally",

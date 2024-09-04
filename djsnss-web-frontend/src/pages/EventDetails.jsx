@@ -1,10 +1,11 @@
 import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { localEventsData } from '../data/localEvents';
 import { largeEventsData } from '../data/largeEvents';
 // Import other event data arrays
 import { universityEventsData } from '../data/universityEvents';
 // Combine all event data arrays
-const allEventsData = [...largeEventsData, ...universityEventsData /* Add more arrays as needed */];
+const allEventsData = [...largeEventsData, ...universityEventsData, ...localEventsData /* Add more arrays as needed */];
 
 const EventDetails = () => {
   const { slug } = useParams();

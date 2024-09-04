@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 ${isScrolled ? 'bg-white shadow-md shadow-opacity-50 shadow-black' : 'bg-white'} transition duration-300`}>
-      <div className="container mx-auto flex lg:justify-evenly justify-between items-center p-4">
+      <div className="container mx-auto flex lg:justify-evenly justify-between items-center p-3">
         <div className='flex justify-start items-center '>
           <Link to="/" className="text-xl font-bold text-gray-800 items-center flex">
             <img src={logo} alt="Logo" className="h-10 w-10 mr-2" />
@@ -46,7 +46,7 @@ const Navbar = () => {
         </div>
         <div className="hidden lg:flex space-x-6 items-center">
           {MenuLinks.map((link) => (
-            <Link key={link.id} to={`/${link.link}`} className="text-gray-600 text-lg hover:text-black font-semibold">
+            <Link key={link.id} to={`/${link.link}`} className="text-gray-600 text-md hover:text-black font-semibold">
               {link.name}
             </Link>
           ))}

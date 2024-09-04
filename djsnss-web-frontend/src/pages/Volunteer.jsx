@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Volunteer = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white flex flex-col">
+    <div className="bg-gradient-to-r w-full from-blue-600 to-purple-700 text-white flex flex-col">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -66,14 +66,44 @@ const Volunteer = () => {
               Join our upcoming events and make an impact. Participate in clean-ups, charity runs, food drives, and more!
             </p>
             <ul className="list-disc ml-5 text-gray-600">
-              <li>Community Clean Up Day - Oct 15, 2024</li>
-                <li>Community Clean-Up Day - Oct 15, 2024</li>
-                <li>Annual Charity Run - Nov 10, 2024</li>
-                <li>Food Drive - Dec 5, 2024</li>
-                <li>Winter Festival Volunteering - Dec 20, 2024</li>
+              <li>Community Clean-Up Day - Oct 15, 2024</li>
+              <li>Annual Charity Run - Nov 10, 2024</li>
+              <li>Food Drive - Dec 5, 2024</li>
+              <li>Winter Festival Volunteering - Dec 20, 2024</li>
             </ul>
           </motion.div>
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="bg-white p-8 rounded-lg shadow-lg mb-12"
+        >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 mb-6 text-center">NSS Events & Activities</h2>
+          <p className="text-gray-600 text-lg mb-4">
+            NSS frequently organizes events such as rural development projects, cleanliness drives, health awareness programs, and environmental conservation campaigns. These events are perfect opportunities for volunteers to give back to society while learning new skills.
+          </p>
+          <p className="text-gray-600 text-lg">
+            From regular meetups to special camps, NSS events bring together people from diverse backgrounds with a common goal of community service. Volunteers often form lasting bonds, build teamwork, and foster lifelong friendships.
+          </p>
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="bg-white p-8 rounded-lg shadow-md mb-12"
+        >
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">Build Lifelong Friendships</h3>
+          <p className="text-gray-600">
+            The NSS experience fosters deep friendships and connections with like-minded individuals. By working together on projects, volunteers not only grow as individuals but also form a network of lifelong companions.
+          </p>
+          <p className="text-gray-600">
+            Frequent meetups, discussions, and group activities create an environment where volunteers share their passion for social service while developing strong relationships that last a lifetime.
+          </p>
+        </motion.div>
+
+
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -108,13 +138,14 @@ const Volunteer = () => {
           </ul>
         </motion.div>
 
+        {/* Notable People & Inspirational Stories Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="bg-gray-100 p-8 rounded-lg shadow-lg mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 mb-6 text-center">Success Stories</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 mb-6 text-center">Notable Volunteers & Inspirational Stories</h2>
           <div className="space-y-6">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -122,9 +153,9 @@ const Volunteer = () => {
               transition={{ duration: 0.8, ease: 'easeOut' }}
               className="bg-white p-6 rounded-lg shadow-md"
             >
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">Jane Doe’s Journey</h3>
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">Mother Teresa&apos;s Legacy</h3>
               <p className="text-gray-600">
-                Jane Doe began her journey as a volunteer and now leads our community outreach programs. Her dedication and hard work have significantly impacted our initiatives and inspired many others to join our cause.
+                Mother Teresa devoted her life to serving the poor and destitute around the world. Her selfless work through the Missionaries of Charity continues to inspire volunteers across the globe.
               </p>
             </motion.div>
             <motion.div
@@ -133,12 +164,64 @@ const Volunteer = () => {
               transition={{ duration: 0.8, ease: 'easeOut' }}
               className="bg-white p-6 rounded-lg shadow-md"
             >
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">John Smith’s Transformation</h3>
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">Dr. APJ Abdul Kalam&apos;s Vision</h3>
               <p className="text-gray-600">
-                John Smith utilized his skills in event management to organize several successful charity events. His involvement has helped raise significant funds and awareness for our causes.
+                Dr. APJ Abdul Kalam, the &apos;People&apos;s President,&apos; emphasized giving back to society through education and social service. His contributions continue to motivate young volunteers to take up social causes.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              className="bg-white p-6 rounded-lg shadow-md"
+            >
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">NSS Alumni Achievements</h3>
+              <p className="text-gray-600">
+                National Service Scheme (NSS) alumni have achieved remarkable success, including K. Radhakrishnan, former ISRO chairman, who actively volunteered during his college days, instilling a lifelong spirit of service.
               </p>
             </motion.div>
           </div>
+        </motion.div>
+        
+        {/* Connecting with Nature & Rural India Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="bg-gray-100 p-8 rounded-lg shadow-lg mb-12"
+        >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 mb-6 text-center">Connecting with Nature & Rural India</h2>
+          <p className="text-gray-600 text-lg mb-4">
+            NSS brings you closer to nature and rural communities, offering a wholesome experience that promotes both environmental awareness and rural development. Through hands-on involvement in projects like tree plantations, village development, and clean energy initiatives, volunteers learn the importance of preserving natural resources.
+          </p>
+          <p className="text-gray-600 text-lg">
+            Volunteering in rural areas exposes you to different cultures, traditions, and the beauty of simplicity, fostering personal growth and a deeper understanding of India’s diversity.
+          </p>
+        </motion.div>
+
+
+        {/* Government Schemes Promoting Social Work */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="bg-gray-100 p-8 rounded-lg shadow-lg mb-12"
+        >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 mb-6 text-center">Government Schemes Supporting Volunteering</h2>
+          <ul className="list-disc ml-6 sm:ml-8 lg:ml-10 text-gray-600">
+            <li>
+              <strong>National Service Scheme (NSS):</strong> A nationwide youth program encouraging students to engage in community service and social welfare activities.
+            </li>
+            <li>
+              <strong>Swachh Bharat Abhiyan:</strong> A national campaign launched by the Government of India to clean streets, roads, and infrastructure across India, promoting volunteer-driven cleanliness drives.
+            </li>
+            <li>
+              <strong>Atal Innovation Mission (AIM):</strong> Encourages youth to volunteer in developing innovative solutions for social challenges through grassroots initiatives.
+            </li>
+            <li>
+              <strong>Pradhan Mantri Kaushal Vikas Yojana (PMKVY):</strong> Volunteers are encouraged to join skill development programs aimed at empowering disadvantaged communities with vocational training.
+            </li>
+          </ul>
         </motion.div>
       </motion.div>
     </div>
