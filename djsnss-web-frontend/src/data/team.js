@@ -36,7 +36,13 @@ faculty: {
   ProgramOfficers: ['Prof. Vyankatesh Bagal', 'Prof. Rahul Taware', 'Prof. Alisha Banz'],
 },
 core: {
-  upperCore: {},
+  upperCore: {
+    Chairperson: ['Rugved Mahulkar'],
+    ViceChairperson: ['Ayush Tolia'],
+    Secretary: ['Nirali Hirpara'],
+    Treasurer: ['Deep Bhanushali'],
+    JointTreasurer: ['Meera Dedhia',],
+  },
   heads: {},
 },
 volunteers: [],
