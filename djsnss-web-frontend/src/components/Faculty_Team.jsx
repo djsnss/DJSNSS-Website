@@ -1,9 +1,11 @@
-import { TeamYearLinks } from '../data/index';
+import { useParams } from 'react-router-dom';
+import { TeamYearLinks } from '../data/teamlinks';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const Faculty_Team = () => {
+  const { year } = useParams();  // Get the year from the URL parameter
   const { ref: teamRef, inView: teamInView } = useInView({ triggerOnce: true });
   const { ref: legacyRef, inView: legacyInView } = useInView({ triggerOnce: true });
 
@@ -23,14 +25,14 @@ const Faculty_Team = () => {
         variants={fadeInVariants}
       >
         <h2 className="relative rounded-md text-zinc-700 text-lg sm:text-2xl md:text-3xl font-medium sm:font-semibold bg-gray-200 px-3 sm:px-4 py-1 shadow-gray-600 tracking-wide shadow-md transition-all duration-500 hover:shadow-xl hover:shadow-gray-600 border-gray-200 border-1 z-10 hover:rounded-2xl">
-          <div className="relative z-10">OUR TEAM</div>
+          <div className="relative z-10">OUR TEAM {year}</div> {/* Display the current year */}
         </h2>
       </motion.div>
 
       {/* Team Description */}
       <div className="flex flex-col items-center max-w-4xl">
         <p className="text-center text-sm sm:text-md md:text-lg font-normal mb-4">
-          The dedicated team behind our initiatives has always been a driving force in our success. Learn more about the people who make it all possible!
+          Learn more about the faculty team for the year {year}.
         </p>
       </div>
 
@@ -58,7 +60,7 @@ const Faculty_Team = () => {
               whileTap={{ scale: 0.95 }}   // Button tap effect
             >
               <Link
-                to={teamYearLink.link}
+                to={`/${teamYearLink.link}`} // Navigate to the correct link based on year
                 className="bg-blue-500 text-sm sm:text-md md:text-lg text-white py-2 px-4 sm:px-6 md:px-10 rounded-full hover:bg-blue-600 transition-colors duration-300"
               >
                 {teamYearLink.name}

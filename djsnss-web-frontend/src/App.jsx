@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -15,8 +14,8 @@ import EventRegistration from './pages/EventRegistration';
 import Login from './pages/Login';
 import License from './pages/License';
 import Footer from './components/Footer';
-import AdminLogin from './pages/AdminLogin';
 import Team from './pages/Team';
+import AdminLogin from './pages/AdminLogin';
 
 const App = () => {
   return (
@@ -24,8 +23,7 @@ const App = () => {
       <div className="flex flex-col justify-between h-screen">
         <Navbar />
         <Routes>
-          <Route path="/team" element={<Team />} />
-          <Route path="/license" element={<License />} />
+          {/* Static Routes */}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/admin" element={<Admin />} />
@@ -39,11 +37,13 @@ const App = () => {
           <Route path="/eventdetails/:slug" element={<EventDetails />} />
           <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/event-registration" element={<EventRegistration />} />
+          <Route path="/license" element={<License />} />
+          <Route path="/team/:year" element={<Team />} />
         </Routes>
         <Footer />
       </div>
     </Router>
-  )
+  );
 }
 
 export default App;
