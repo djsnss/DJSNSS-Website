@@ -26,7 +26,7 @@ export function Component() {
   return (
     <Footer bgDark>
       <div className="w-full">
-        <div className="grid bg-gray-200 text-black w-full grid-cols-2 gap-8 pl-4 sm:pl-14 py-6 md:grid-cols-4">
+        <div className="grid bg-gray-200 text-black w-full grid-cols-2 gap-8 pl-4 sm:pl-14 py-6 md:grid-cols-3">
           {/* Company Section */}
           <div>
             <FooterTitle className="text-sm sm:text-md md:text-lg pb-3" title="Useful Links" />
@@ -43,10 +43,10 @@ export function Component() {
           <div>
             <FooterTitle className="text-sm sm:text-md md:text-lg pb-3" title="Help Center" />
             <FooterLinkGroup col>
-              <FooterLink href="#">Discord Server</FooterLink>
-              <FooterLink href="#">Twitter</FooterLink>
-              <FooterLink href="#">Facebook</FooterLink>
-              <FooterLink href="#">Contact Us</FooterLink>
+              <FooterLink href="/error">Discord Server</FooterLink>
+              <FooterLink href="https://x.com/NSS_DJSCE">Twitter</FooterLink>
+              <FooterLink href="https://www.facebook.com/share/tbpuL3mtrdtD7iwD/?mibextid=qi2Omg">Facebook</FooterLink>
+              <FooterLink href="/contact">Contact Us</FooterLink>
             </FooterLinkGroup>
           </div>
           
@@ -60,7 +60,7 @@ export function Component() {
           </div>
           
           {/* Download Section */}
-          <div>
+          {/* <div>
             <FooterTitle className="text-sm sm:text-md md:text-lg pb-3" title="Download" />
             <FooterLinkGroup col>
               <FooterLink href="#">iOS</FooterLink>
@@ -68,7 +68,7 @@ export function Component() {
               <FooterLink href="#">Windows</FooterLink>
               <FooterLink href="#">MacOS</FooterLink>
             </FooterLinkGroup>
-          </div>
+          </div> */}
         </div>
         
         {/* Footer Bottom Section */}

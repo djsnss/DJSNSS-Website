@@ -35,7 +35,7 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className='flex flex-col h-[80vh] bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500'>
+    <div className='flex flex-col h-[80vh] bg-gradient-to-br from-blue-400 to-green-300'>
       <div className="container mx-auto p-4 mt-20 max-w-md">
         <motion.h1
           className="text-3xl font-bold text-white mb-6"

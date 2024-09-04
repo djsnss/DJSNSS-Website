@@ -3,11 +3,13 @@ import { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import ErrorPage from './components/ErrorPage';
 
 // Lazy loaded components
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Admin = lazy(() => import('./pages/Admin'));
+const Contact = lazy(() => import('./pages/ContactUs'));
 const AdminWorkPage = lazy(() => import('./pages/AdminWorkPage'));
 const Events = lazy(() => import('./pages/Events'));
 const CheckHours = lazy(() => import('./pages/CheckHours'));
@@ -30,6 +32,7 @@ const App = () => {
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/login" element={<Login />} />
@@ -44,6 +47,9 @@ const App = () => {
             <Route path="/event-registration" element={<EventRegistration />} />
             <Route path="/license" element={<License />} />
             <Route path="/team/:year" element={<Team />} />
+
+            {/* Catch-all route for 404 errors */}
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </Suspense>
         <Footer />
