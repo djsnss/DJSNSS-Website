@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Volunteer = () => {
   return (
-    <div className="bg-gradient-to-r w-full from-blue-600 to-purple-700 text-white flex flex-col">
+    <div className="bg-gradient-to-r w-full from-blue-300 to-purple-300 text-white flex flex-col">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -12,11 +12,11 @@ const Volunteer = () => {
         className="mt-20 mx-auto p-6 lg:p-12 max-w-6xl"
       >
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-200 mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
             Volunteer with Us
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-200">
-            Join our team of dedicated volunteers and make a lasting impact in the community. Contribute your time and skills to drive meaningful change.
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-800">
+            Join our dedicated team of volunteers and be a driving force for meaningful transformation. By offering your time, skills, and unwavering passion, you can make a profound impact on our community, inspire positive change, and help build a legacy of compassion and progress that will echo through generations. Together, we can forge a brighter future and create lasting differences that uplift and empower those around us.
           </p>
         </div>
 
@@ -87,7 +87,7 @@ const Volunteer = () => {
             From regular meetups to special camps, NSS events bring together people from diverse backgrounds with a common goal of community service. Volunteers often form lasting bonds, build teamwork, and foster lifelong friendships.
           </p>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -182,7 +182,7 @@ const Volunteer = () => {
             </motion.div>
           </div>
         </motion.div>
-        
+
         {/* Connecting with Nature & Rural India Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
