@@ -33,7 +33,7 @@ const Features = () => {
   return (
     <div>
       {/* Features Section */}
-      <div className="bg-gradient-to-tr to-rose-400 from-indigo-500 w-full">
+      <div className="w-full">
         <motion.div
           className="flex flex-wrap"
           ref={ref} // Hooking the ref to observe the section

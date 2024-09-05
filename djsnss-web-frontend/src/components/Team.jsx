@@ -22,9 +22,9 @@ const Faculty_Team = () => {
         ref={teamRef}
         initial="hidden"
         animate={teamInView ? 'visible' : 'hidden'}
-        variants={fadeInVariants}
+        variants={fadeInVariants}s
       >
-        <h2 className="relative rounded-md text-zinc-700 text-lg sm:text-2xl md:text-3xl font-medium sm:font-semibold bg-gray-200 px-3 sm:px-4 py-1 shadow-gray-600 tracking-wide shadow-md transition-all duration-500 hover:shadow-xl hover:shadow-gray-600 border-gray-200 border-1 z-10 hover:rounded-2xl">
+        <h2 className="relative rounded-xl text-zinc-700 text-lg sm:text-2xl md:text-3xl font-medium sm:font-semibold bg-gray-200 px-3 sm:px-4 py-1 shadow-gray-600 tracking-wide shadow-md transition-all duration-500 hover:shadow-xl hover:shadow-gray-600 border-gray-200 border-1 z-10 hover:rounded-2xl">
           <div className="relative z-10">OUR TEAM {year}</div> {/* Display the current year */}
         </h2>
       </motion.div>
@@ -46,7 +46,7 @@ const Faculty_Team = () => {
         variants={fadeInVariants}
       >
         <div className="mb-8 p-4 sm:p-6 flex items-center justify-center">
-          <h2 className="relative rounded-md text-zinc-700 text-lg sm:text-2xl md:text-3xl font-medium sm:font-semibold bg-gray-200 px-3 sm:px-4 py-1 shadow-gray-600 tracking-wide shadow-md transition-all duration-500 hover:shadow-xl hover:shadow-gray-600 border-gray-200 border-1 z-10 hover:rounded-2xl">
+          <h2 className="relative rounded-xl text-zinc-700 text-lg sm:text-2xl md:text-3xl font-medium sm:font-semibold bg-gray-200 px-3 sm:px-4 py-1 shadow-gray-600 tracking-wide shadow-md transition-all duration-500 hover:shadow-xl hover:shadow-gray-600 border-gray-200 border-1 z-10 hover:rounded-2xl">
             <div className="relative z-10">OUR LEGACY</div>
           </h2>
         </div>

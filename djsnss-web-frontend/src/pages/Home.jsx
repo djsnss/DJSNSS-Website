@@ -4,7 +4,7 @@ import logo from '../assets/DJSLogo.png';
 import CorePic from '../assets/Core.jpg';
 import ImageCarousel from '../components/ImageCarousel';
 import SneakPeek from '../components/SneakPeek';
-import Faculty_Team from '../components/Faculty_Team';
+import Team from '../components/Team';
 
 import BandraBC from '../assets/Events/BandraBC.png';
 import CyberSavvy from '../assets/Events/CyberSavvy.png';
@@ -88,7 +88,7 @@ const Home = () => {
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <Faculty_Team />
+        <Team />
       </motion.div>
 
       {/* Image Carousel */}

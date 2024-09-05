@@ -12,11 +12,11 @@ const EventDetails = () => {
   const eventDetail = allEventsData.find((event) => event.slug === slug);
 
   return (
-    <div className="flex flex-col items-center justify-center pt-20">
-      <div className="mx-auto p-4">
+    <div className="flex flex-col items-center justify-center pt-16">
+      <div>
         {eventDetail ? (
           <motion.div
-            className={`max-w-full lg:max-w-4xl w-full p-6 rounded-lg shadow-lg ${eventDetail.background} text-white`}
+            className={`w-full p-6 flex flex-col lg:flex-row ${eventDetail.background} text-white`}
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -24,7 +24,7 @@ const EventDetails = () => {
             <motion.img
               src={eventDetail.imageURL}
               alt={eventDetail.title}
-              className="w-full h-72 object-cover rounded-lg"
+              className="w-[80vh] h-96 mr-0 lg:mr-6 self-center object-cover rounded-lg"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
@@ -37,7 +37,7 @@ const EventDetails = () => {
             >
               <h1 className="text-4xl lg:text-5xl font-bold mb-4">{eventDetail.title}</h1>
               <p className="text-lg lg:text-xl mb-2">{eventDetail.description}</p>
-              <p className="text-sm lg:text-base mb-4 opacity-90">{eventDetail.longDescription}</p>
+              <p className="text-sm text-justify lg:text-base mb-4 opacity-90">{eventDetail.longDescription}</p>
               <div className="mt-4 space-y-2">
                   <p className="text-base lg:text-lg"><strong>Scale:</strong> {eventDetail.scale}</p>
                   <p className="text-base lg:text-lg"><strong>Duration:</strong> {eventDetail.duration}</p>

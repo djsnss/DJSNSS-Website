@@ -1,8 +1,12 @@
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { localEventsData } from '../data/localEvents';
 
 const Features = () => {
+  const [dragConstraint, setDragConstraint] = useState(0);
+  const containerRef = useRef(null);
+
   const cardVariants = {
     visible: { opacity: 1, scale: 1 },
     hidden: { opacity: 0, scale: 0.8 },
@@ -11,13 +15,27 @@ const Features = () => {
   const cardWidth = 320; // Adjust card width to match the actual width
   const gap = 16; // Gap between cards
 
-  // Calculate drag constraint based on the number of cards and gaps
-  const totalWidth = (localEventsData.length * (cardWidth + gap));
-  const dragConstraint = -(totalWidth - window.innerWidth + gap);
+  useEffect(() => {
+    const calculateDragConstraint = () => {
+      const containerWidth = containerRef.current.offsetWidth;
+      const totalWidth = localEventsData.length * (cardWidth + gap + 70);
+      const constraint = -(totalWidth - containerWidth + gap);
+      setDragConstraint(constraint);
+    };
+
+    // Calculate on mount and when window resizes
+    calculateDragConstraint();
+    window.addEventListener('resize', calculateDragConstraint);
+
+    return () => {
+      window.removeEventListener('resize', calculateDragConstraint);
+    };
+  }, [cardWidth, gap]);
 
   return (
-    <div className="relative w-full bg-gradient-to-tl to-blue-400 from-emerald-400 py-12 overflow-hidden">
-      <div className="flex overflow-x-scroll snap-end snap-mandatory space-x-4 px-4 md:px-8 scrollbar-hide">
+    <div className="relative w-full bg-transparent py-8 overflow-hidden">
+      {/* Container for the cards */}
+      <div className="flex overflow-x-scroll snap-end snap-mandatory space-x-4 px-4 md:px-8 scrollbar-hide" ref={containerRef}>
         <motion.div
           className="flex space-x-4"
           drag="x"
@@ -30,7 +48,7 @@ const Features = () => {
           {localEventsData.map((event) => (
             <motion.div
               key={event.id}
-              className="snap-start ml-4 flex-shrink-0 w-64 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 p-4 flex flex-col justify-center items-center bg-white rounded-lg shadow-lg relative"
+              className="snap-start flex-shrink-0 w-64 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 p-4 flex flex-col justify-center items-center bg-white rounded-lg shadow-lg relative"
               variants={cardVariants}
               transition={{ duration: 0.8, ease: 'easeInOut' }}
             >

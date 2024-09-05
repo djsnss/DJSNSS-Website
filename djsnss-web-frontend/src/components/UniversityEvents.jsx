@@ -33,7 +33,7 @@ const Features = () => {
   }, [cardWidth, gap]);
 
   return (
-    <div className="relative w-full bg-gradient-to-tl to-blue-400 from-emerald-400 py-8 overflow-hidden">
+    <div className="relative w-full bg-transparent py-8 overflow-hidden">
       {/* Container for the cards */}
       <div className="flex overflow-x-scroll snap-end snap-mandatory space-x-4 px-4 md:px-8 scrollbar-hide" ref={containerRef}>
         <motion.div
