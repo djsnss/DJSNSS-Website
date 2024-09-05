@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import logo from '../assets/DJSLogo.png';
 import CorePic from '../assets/Core.jpg';
 import ImageCarousel from '../components/ImageCarousel';
@@ -12,7 +11,7 @@ import AntiDowry from '../assets/Events/AntiDowry.png';
 import yarana1 from '../assets/Events/Yaarana/yarana1.jpg';
 
 import VolunteerHomePage from '../components/VolunteerHomePage';
-import VolunteerPolicy from './VolunteerPolicy';
+
 const images = [BandraBC, yarana1, CyberSavvy, AntiDowry];
 const captions = [
   'Bandra Beach Cleanup',

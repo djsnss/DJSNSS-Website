@@ -77,7 +77,7 @@ const Events = () => {
       </div>
 
       {/* Informational Section 1: Why Volunteer? */}
-      <div className="max-w-6xl self-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+      <div className="max-w-6xl mx-2 md:mx-0 text-justify self-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -141,7 +141,7 @@ const Events = () => {
         >
           <h2 className="text-md sm:text-lg lg:text-xl font-semibold text-gray-800 mb-4">Upcoming Opportunities</h2>
           <p className="text-gray-600 mb-4">
-            Stay informed about upcoming volunteer opportunities and events that align with your interests. Don't miss out on your chance to make a difference.
+            Stay informed about upcoming volunteer opportunities and events that align with your interests. Don&apos;t miss out on your chance to make a difference.
           </p>
           <ul className="list-disc ml-5 text-gray-600">
             <li>Community clean-ups and outreach</li>
@@ -196,63 +196,6 @@ const Events = () => {
         {renderMotionSection('University Level Events', UniversityEvents)}
         {renderMotionSection('Local Area Level Events', LocalEvents)}
       </div>
-
-      {/* New Section: Popular Events */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="bg-gray-100 py-8"
-      >
-        <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Popular Events</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6">
-          {events.slice(0, 4).map(event => (
-            <div key={event._id} className="bg-white shadow-md rounded-lg p-4">
-              <img src={event.eventImg} alt={event.eventName} className="w-full h-32 object-cover rounded-lg mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{event.eventName}</h3>
-              <p className="text-gray-500">{event.eventDesc.substring(0, 50)}...</p>
-              <Link to="/event-registration">
-                <button
-                  onClick={() => handleClick(event._id)}
-                  className="bg-green-500 text-white font-bold py-2 px-4 mt-4 rounded-lg hover:bg-green-600"
-                >
-                  Register Now
-                </button>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* New Section: Past Events */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="bg-gray-200 py-8"
-      >
-        <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Past Events</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
-          {events.slice(-3).map(event => (
-            <div key={event._id} className="bg-white shadow-md rounded-lg p-4">
-              <img src={event.eventImg} alt={event.eventName} className="w-full h-32 object-cover rounded-lg mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{event.eventName}</h3>
-              <p className="text-gray-500">{event.eventDesc}</p>
-              <p className="text-gray-500 mt-2">{new Date(event.eventDate).toLocaleDateString()}</p>
-              <Link to="/event-details">
-                <button
-                  onClick={() => handleClick(event._id)}
-                  className="bg-blue-500 text-white font-bold py-2 px-4 mt-4 rounded-lg hover:bg-blue-700"
-                >
-                  View Details
-                </button>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </motion.div>
     </div>
   );
 };

@@ -4,6 +4,8 @@ import NSSCamp from '../assets/Events/NSSCamp.jpg'
 import AnnualCharity from '../assets/Events/AnnualCharity.png'
 import VoterRegistration from '../assets/Events/VoterRegistration.png'
 import BDD from '../assets/Events/BDD.jpg'
+import NewspaperCollectionDrive from '../assets/Events/NewspaperCollection.png';
+import IndependenceDayRally from '../assets/Events/TirangaRally/IMG_4530.jpg';
 
 export const largeEventsData = [
     {
@@ -92,40 +94,12 @@ export const largeEventsData = [
     },
     {
       id: 7,
-      title: "INDEPENDENCE DAY RALLY",
-      description: "Celebrating freedom with unity",
-      slug: "independence-day-rally",
-      link: "/eventdetails/independence-day-rally",
-      background: "bg-orange-600",
-      imageURL: '',
-      longDescription: "On 15th August 2024, the NSS unit of Dwarkadas J. Sanghvi College of Engineering organized an Independence Day Rally, celebrating India's freedom and promoting national unity. The event featured a patriotic march, inspiring speeches, and cultural performances that highlighted the importance of independence and the sacrifices made for the nation. Students, faculty, and volunteers participated enthusiastically, showcasing their love for the country. The rally concluded with a flag-hoisting ceremony and a pledge to uphold the values of democracy, unity, and equality. The event was a significant reminder of the ongoing efforts needed to preserve and protect the nation's freedom and heritage.",
-      scale: "Large",
-      duration: "1 day",
-      location: "DJ Sanghvi College",
-      date: "15th Aug 2024",
-    },
-    {
-      id: 8,
-      title: "MENTAL HEALTH SEMINAR",
-      description: "Breaking the stigma, embracing well-being",
-      slug: "mental-health-seminar",
-      link: "/eventdetails/mental-health-seminar",
-      background: "bg-teal-600",
-      imageURL: '',
-      longDescription: "On 10th October 2024, the NSS unit of Dwarkadas J. Sanghvi College of Engineering held a Mental Health Seminar to raise awareness about mental well-being among students. The seminar featured talks by mental health professionals, interactive workshops, and group discussions aimed at breaking the stigma surrounding mental health issues. Topics covered included stress management, coping strategies, and the importance of seeking help when needed. The seminar was well-attended and provided valuable resources and support for students, promoting a culture of openness and care for mental well-being within the college community.",
-      scale: "Medium",
-      duration: "1 day",
-      location: "DJ Sanghvi College",
-      date: "10th Oct 2024",
-    },
-    {
-      id: 9,
       title: "NEWSPAPER COLLECTION DRIVE",
       description: "Recycle today for a better tomorrow",
       slug: "newspaper-collection-drive",
       link: "/eventdetails/newspaper-collection-drive",
-      background: "bg-slate-600",
-      imageURL: '',
+      background: "bg-indigo-600",
+      imageURL: NewspaperCollectionDrive,
       longDescription: "On 5th June 2024, World Environment Day, the NSS unit of Dwarkadas J. Sanghvi College of Engineering organized a Newspaper Collection Drive aimed at promoting recycling and environmental sustainability. The event encouraged students to collect and donate old newspapers, which were then sent for recycling. The drive included educational sessions on the importance of recycling and its impact on reducing waste and conserving resources. The event successfully collected a significant amount of paper waste, highlighting the collective effort needed to protect the environment and promoting a culture of sustainability among the college community.",
       scale: "Medium",
       duration: "1 day",
@@ -133,17 +107,31 @@ export const largeEventsData = [
       date: "5th June 2024",
     },
     {
-      id: 10,
-      title: "BOOK COLLECTION DRIVE",
-      description: "Share knowledge, spread light",
-      slug: "book-collection-drive",
-      link: "/eventdetails/book-collection-drive",
-      background: "bg-indigo-600",
-      imageURL: '',
-      longDescription: "On 23rd April 2024, World Book Day, the NSS unit of Dwarkadas J. Sanghvi College of Engineering organized a Book Collection Drive to promote literacy and education among underprivileged children. Students and faculty were encouraged to donate books, which were later distributed to schools and community centers in need. The event included a book fair, reading sessions, and interactive activities aimed at fostering a love for reading among participants. The drive successfully collected hundreds of books, making a significant impact on the lives of many children and reinforcing the importance of education as a tool for empowerment and social change.",
-      scale: "Medium",
+      id: 8,
+      title: "INDEPENDENCE DAY RALLY",
+      description: "Celebrating freedom with unity",
+      slug: "independence-day-rally",
+      link: "/eventdetails/independence-day-rally",
+      background: "bg-orange-600",
+      imageURL: IndependenceDayRally,
+      longDescription: "On 15th August 2024, the NSS unit of Dwarkadas J. Sanghvi College of Engineering organized an Independence Day Rally, celebrating India's freedom and promoting national unity. The event featured a patriotic march, inspiring speeches, and cultural performances that highlighted the importance of independence and the sacrifices made for the nation. Students, faculty, and volunteers participated enthusiastically, showcasing their love for the country. The rally concluded with a flag-hoisting ceremony and a pledge to uphold the values of democracy, unity, and equality. The event was a significant reminder of the ongoing efforts needed to preserve and protect the nation's freedom and heritage.",
+      scale: "Large - University Level",
       duration: "1 day",
       location: "DJ Sanghvi College",
-      date: "23rd Apr 2024",
+      date: "15th Aug 2024",
     },
+    {
+      id: 9,
+      title: "STEM CELL DONATION DRIVE",
+      description: "Be a hero, save a life",
+      slug: "stem-cell-donation-drive",
+      link: "/eventdetails/stem-cell-donation-drive",
+      background: "bg-yellow-600",
+      imageURL: GrainAThon,
+      longDescription: "On 16th August 2024, the NSS unit of Dwarkadas J. Sanghvi College of Engineering organized a Stem Cell Donation Drive in collaboration with the DATRI Blood Stem Cell Donors Registry. The event aimed to raise awareness about the importance of stem cell donation and encourage students to register as potential donors. The drive featured informative sessions, interactive activities, and inspiring stories of lives saved through stem cell transplants. Our college students broke the current record of donatons by donating a record 560 swabs, showcasing their commitment to helping those in need. The event highlighted the power of compassion and solidarity in supporting patients battling life-threatening diseases. The enthusiasm and generosity of all participants made the drive a memorable and impactful experience, setting the stage for future initiatives to save lives and promote health and well-being.",
+      scale: "Large",
+      duration: "1 day",
+      location: "DJ Sanghvi College",
+      date: "16th Aug 2024",
+    }
   ];
