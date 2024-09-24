@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { universityEventsData } from '../data/universityEvents';
+import { universityEventsData } from '../../data/universityEvents';
 
 const UniversityEvents = () => {
   const constraintsRef = useRef(null);

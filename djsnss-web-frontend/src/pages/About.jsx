@@ -3,8 +3,8 @@ import '../css/About.css';
 import Team from '../components/Team';
 import Image1 from '../assets/Events/Yaarana/IMG_1628.jpg';
 import Faculty from '../components/Faculty';
-import UniversityEventsCarousel from '../components/AboutUsCarousel';
-import LocalEventsCarousel from '../components/AboutUsCarousel2';
+import UniversityEventsCarousel from '../components/aboutUs/AboutUsCarousel';
+import LocalEventsCarousel from '../components/aboutUs/AboutUsCarousel2';
 
 const About = () => {
   return (

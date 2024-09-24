@@ -81,9 +81,14 @@ const Navbar = () => {
         onClick={toggleMenu}
       />
       <div
-        className={`fixed inset-y-0 left-0 w-full bg-white p-4 transform transition-transform duration-300 z-50 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+        className={`fixed inset-y-0 right-0 w-full bg-white p-4 transform transition-transform duration-300 z-50 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
-        <button onClick={toggleMenu} className="text-gray-800 focus:outline-none mb-4">
+        <button onClick={toggleMenu} className="text-gray-800 w-full h-8 flex items-center justify-between focus:outline-none">
+          <Link href="/" className='flex'>
+            <img src={logo} alt="DJS NSS Logo" className="h-10 w-10 self-center" />
+            <span className='font-bold text-xl lg:text-2xl px-2'>DJSNSS
+            </span>
+          </Link>
           <svg
             className="w-6 h-6"
             fill="none"
@@ -94,13 +99,12 @@ const Navbar = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
-        <div className="flex flex-col space-y-4">
-          <img src={logo} alt="Logo" className="h-16 w-16 mb-4 self-center" />
+        <div className="flex flex-col justify-center items-center space-y-4">
           {MenuLinks.map((link) => (
             <Link
               key={link.id}
               to={`/${link.link}`}
-              className="text-gray-800 text-lg hover:bg-gray-100 p-2 rounded"
+              className="text-gray-800 text-lg sm:text-2xl  hover:bg-gray-100 p-2 rounded"
               onClick={toggleMenu}
             >
               {link.name}
@@ -108,14 +112,14 @@ const Navbar = () => {
           ))}
           <Link
             to="/check-hours"
-            className="bg-blue-500 text-white max-w-[200px] py-2 px-4 rounded-full text-center"
+            className="bg-blue-500 text-white max-w-[200px] min-w-[150px] py-2 px-4 rounded-full text-center"
             onClick={toggleMenu}
           >
             Check Hours
           </Link>
           <Link
             to="/hours-complaint"
-            className="bg-blue-500 text-white py-2 max-w-[200px] px-4 rounded-full text-center"
+            className="bg-blue-500 text-white py-2 max-w-[200px] min-w-[150px] px-4 rounded-full text-center"
             onClick={toggleMenu}
           >
             Hours Complaint

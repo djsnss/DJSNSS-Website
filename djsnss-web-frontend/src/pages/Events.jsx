@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
-import LargeEvents from '../components/LargeEvents';
-import UniversityEvents from '../components/UniversityEvents';
-import LocalEvents from '../components/LocalEvents';
+import LargeEvents from '../components/events/LargeEvents';
+import UniversityEvents from '../components/events/UniversityEvents';
+import LocalEvents from '../components/events/LocalEvents';
+import GenerateCertificate from '../components/events/generateCertificate';
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -188,6 +189,10 @@ const Events = () => {
             <li>&quot;Being a part of these events has boosted my confidence and leadership abilities.&quot;</li>
           </ul>
         </motion.div>
+      </div>
+
+      <div className="mx-auto p-6">
+        <GenerateCertificate />
       </div>
 
       {/* Sub-Sections with Motion Animations */}

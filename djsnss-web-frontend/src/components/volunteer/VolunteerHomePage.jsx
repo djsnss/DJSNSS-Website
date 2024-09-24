@@ -1,6 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Image1 from '../../assets/Events/TreePlantation.png';
 
 const Volunteer = () => {
   return (
@@ -15,9 +15,16 @@ const Volunteer = () => {
           <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-800 mb-6">
             D. J. Sanghvi NSS
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-800">
-            Join our dedicated team of volunteers and be a driving force for meaningful transformation. By offering your time, skills, and unwavering passion, you can make a profound impact on our community, inspire positive change, and help build a legacy of compassion and progress that will echo through generations. Together, we can forge a brighter future and create lasting differences that uplift and empower those around us.
-          </p>
+          <div className='flex flex-col justify-around items-center'>
+            <p className="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-800">
+              Join our dedicated team of volunteers and be a driving force for meaningful transformation. By offering your time, skills, and unwavering passion, you can make a profound impact on our community, inspire positive change, and help build a legacy of compassion and progress that will echo through generations. Together, we can forge a brighter future and create lasting differences that uplift and empower those around us.
+            </p>
+            <img
+              src={Image1}
+              alt="Volunteers"
+              className="w-full h-80 object-cover rounded-2xl"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">

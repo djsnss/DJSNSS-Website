@@ -10,7 +10,7 @@ import CyberSavvy from '../assets/Events/CyberSavvy.png';
 import AntiDowry from '../assets/Events/AntiDowry.png';
 import yarana1 from '../assets/Events/Yaarana/yarana1.jpg';
 
-import VolunteerHomePage from '../components/VolunteerHomePage';
+import VolunteerHomePage from '../components/volunteer/VolunteerHomePage';
 
 const images = [BandraBC, yarana1, CyberSavvy, AntiDowry];
 const captions = [

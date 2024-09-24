@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { largeEventsData } from '../data/largeEvents';
+import { largeEventsData } from '../../data/largeEvents';
 const Features = () => {
   const controls = useAnimation();
   const { ref, inView } = useInView({

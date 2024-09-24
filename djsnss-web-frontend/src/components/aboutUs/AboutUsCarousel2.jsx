@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { localEventsData } from '../data/localEvents';
+import { localEventsData } from '../../data/localEvents';
 
 const LocalEvents = () => {
   const constraintsRef = useRef(null);

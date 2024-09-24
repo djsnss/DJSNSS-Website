@@ -1,8 +1,21 @@
+// Function to generate common faculty data
+const generateFacultyData = () => ({
+  Principal: ['Dr. Hari Vasudevan'],
+  ProgramOfficers: ['Prof. Vyankatesh Bagal', 'Prof. Rahul Taware', 'Prof. Alisha Banz'],
+});
+
+// Function to generate empty core structure for previous years
+const emptyCoreData = {
+  upperCore: {},
+  heads: {},
+};
+
+// Function to generate empty volunteer list
+const emptyVolunteers = [];
+
+// Team data for each year
 const Team_23_24 = {
-  faculty: {
-      Principal: ['Dr. Hari Vasudevan'],
-      ProgramOfficers: ['Prof. Vyankatesh Bagal', 'Prof. Rahul Taware', 'Prof. Alisha Banz'],
-  },
+  faculty: generateFacultyData(),
   core: {
     upperCore: {
       Chairperson: ['Dev Popat'],
@@ -21,46 +34,28 @@ const Team_23_24 = {
       Editorial: ['Shriya Kela', 'Diyan Mehta', 'Hitanshu Shah', 'Dhruvi Shah'],
     },
   },
-  volunteers: [
-    'Devesh Bhayani',
-    'Hriday Thakkar',
-    'Ayushi Shah',
-    'Upasana Shah',
-  ],
+  volunteers: ['Devesh Bhayani', 'Hriday Thakkar', 'Ayushi Shah', 'Upasana Shah'],
 };
 
-// Empty data for previous years
+// Simplified data for previous years
 const Team_22_23 = {
-faculty: {
-  Principal: ['Dr. Hari Vasudevan'],
-  ProgramOfficers: ['Prof. Vyankatesh Bagal', 'Prof. Rahul Taware', 'Prof. Alisha Banz'],
-},
-core: {
-  upperCore: {
-    Chairperson: ['Rugved Mahulkar'],
-    ViceChairperson: ['Ayush Tolia'],
-    Secretary: ['Nirali Hirpara'],
-    Treasurer: ['Deep Bhanushali'],
-    JointTreasurer: ['Meera Dedhia',],
+  faculty: generateFacultyData(),
+  core: {
+    upperCore: {
+      Chairperson: ['Rugved Mahulkar'],
+      ViceChairperson: ['Ayush Tolia'],
+      Secretary: ['Nirali Hirpara'],
+      Treasurer: ['Deep Bhanushali'],
+      JointTreasurer: ['Meera Dedhia'],
+    },
+    heads: {}, // Heads can be expanded similarly
   },
-  heads: {},
-},
-volunteers: [],
+  volunteers: emptyVolunteers,
 };
 
-const Team_21_22 = {
-faculty: {
-  Principal: ['Dr. Hari Vasudevan'],
-  ProgramOfficers: ['Prof. Vyankatesh Bagal', 'Prof. Rahul Taware', 'Prof. Alisha Banz'],
-},
-core: {
-  upperCore: {},
-  heads: {},
-},
-volunteers: [],
-};
-
-// Repeat the above pattern for other years (2020-21, 2019-20, etc.)
+const Team_21_22 = { faculty: generateFacultyData(), core: emptyCoreData, volunteers: emptyVolunteers };
+const Team_20_21 = { faculty: generateFacultyData(), core: emptyCoreData, volunteers: emptyVolunteers };
+const Team_19_20 = { faculty: generateFacultyData(), core: emptyCoreData, volunteers: emptyVolunteers };
 
 // Export all team data
-export { Team_23_24, Team_22_23, Team_21_22 };
+export { Team_23_24, Team_22_23, Team_21_22, Team_20_21, Team_19_20 };

@@ -38,11 +38,23 @@ const EventDetails = () => {
               <h1 className="text-4xl lg:text-5xl font-bold mb-4">{eventDetail.title}</h1>
               <p className="text-lg lg:text-xl mb-2">{eventDetail.description}</p>
               <p className="text-sm text-justify lg:text-base mb-4 opacity-90">{eventDetail.longDescription}</p>
-              <div className="mt-4 space-y-2">
+              <div className="flex flex-col lg:flex-row justify-between mt-4 ">
+                <div className="space-y-2 mb-4">
                   <p className="text-base lg:text-lg"><strong>Scale:</strong> {eventDetail.scale}</p>
                   <p className="text-base lg:text-lg"><strong>Duration:</strong> {eventDetail.duration}</p>
                   <p className="text-base lg:text-lg"><strong>Location:</strong> {eventDetail.location}</p>
                   <p className="text-base lg:text-lg"><strong>Date:</strong> {eventDetail.date}</p>
+                </div>
+                <div>
+                  <a
+                    href="https://nsss-certificate.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="bg-white text-gray-800 hover:text-blue-500 px-4 py-2 mt-4 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+                  >
+                    Generate Certificate &gt;
+                  </a>
+                </div>
               </div>
             </motion.div>
           </motion.div>

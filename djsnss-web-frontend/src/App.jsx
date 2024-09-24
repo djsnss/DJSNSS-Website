@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import ErrorPage from './components/ErrorPage';
+import Loader from './components/Loaders/loader2/CustomLoader2'
 
 // Lazy loaded components
 const Home = lazy(() => import('./pages/Home'));
@@ -29,7 +30,7 @@ const App = () => {
       <div className="flex flex-col justify-between h-screen">
         <Navbar />
         <ScrollToTop />
-        <Suspense fallback={<div className='text-center pt-30 text-4xl'>Loading...</div>}>
+        <Suspense fallback={<div className='h-screen flex items-center justify-center bg-gradient-to-tr from-blue-300 to-white'><Loader className="z-" /></div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
