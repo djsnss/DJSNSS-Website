@@ -26,26 +26,25 @@ const EventRegistration = () => {
     console.log('Form Data:', user);
     try {
       const response = await axios.post('http://localhost:5000/api/register', user, {
-        method:'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
       });
 
       console.log('Registration Response:', response.data);
-      setMessage("Registration successful!");
+      
+      // Show a popup on successful registration
+      alert('You have successfully submitted the form!');
+
+      // Redirect to home page immediately after the popup is acknowledged
+      window.location.href = '/'; // Modify this to your actual home page route
 
     } catch (error) {
       if (error.response) {
-   
         console.error("Error registering for the event:", error.response.data);
         setMessage(`Registration failed: ${error.response.data.message || "Please try again."}`);
       } else if (error.request) {
-      
         console.error("Error registering for the event:", error.request);
         setMessage("No response from server. Please try again.");
       } else {
-       
         console.error("Error registering for the event:", error.message);
         setMessage("Registration failed due to an unexpected error. Please try again.");
       }
@@ -57,7 +56,7 @@ const EventRegistration = () => {
       <div className="w-full max-w-lg bg-white p-8 rounded-lg shadow-md">
         <h1 className="text-2xl font-bold mb-6 text-center">Register for Event</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
+          <div className="mb-2"> {/* Added margin-bottom for spacing */}
             <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
             <input
               type="text"
@@ -69,7 +68,7 @@ const EventRegistration = () => {
               required
             />
           </div>
-          <div>
+          <div className="mb-2"> {/* Added margin-bottom for spacing */}
             <label htmlFor="sapId" className="block text-sm font-medium text-gray-700">SAP ID</label>
             <input
               type="text"
@@ -81,7 +80,7 @@ const EventRegistration = () => {
               required
             />
           </div>
-          <div>
+          <div className="mb-2"> {/* Added margin-bottom for spacing */}
             <label htmlFor="branch" className="block text-sm font-medium text-gray-700">Branch</label>
             <input
               type="text"
@@ -93,7 +92,7 @@ const EventRegistration = () => {
               required
             />
           </div>
-          <div>
+          <div className="mb-2"> {/* Added margin-bottom for spacing */}
             <label htmlFor="year" className="block text-sm font-medium text-gray-700">Year</label>
             <input
               type="text"
@@ -105,7 +104,7 @@ const EventRegistration = () => {
               required
             />
           </div>
-          <div>
+          <div className="mb-2"> {/* Added margin-bottom for spacing */}
             <label htmlFor="gender" className="block text-sm font-medium text-gray-700">Gender</label>
             <select
               id="gender"
@@ -121,7 +120,7 @@ const EventRegistration = () => {
               <option value="Other">Other</option>
             </select>
           </div>
-          <div>
+          <div className="mb-2"> {/* Added margin-bottom for spacing */}
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email ID</label>
             <input
               type="email"
@@ -133,7 +132,7 @@ const EventRegistration = () => {
               required
             />
           </div>
-          <div>
+          <div className="mb-2"> {/* Added margin-bottom for spacing */}
             <label htmlFor="description" className="block text-sm font-medium text-gray-700">Why do you want to be a part of this event?</label>
             <textarea
               id="description"
@@ -152,7 +151,7 @@ const EventRegistration = () => {
             Register
           </button>
         </form>
-        {message && <p className="mt-4 text-center text-green-500">{message}</p>}
+        {message && <p className="mt-4 text-center text-red-500">{message}</p>}
       </div>
     </div>
   );

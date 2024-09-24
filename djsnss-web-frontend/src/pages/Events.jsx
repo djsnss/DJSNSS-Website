@@ -1,44 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import { motion } from 'framer-motion';
-import LargeEvents from '../components/LargeEvents';
-import UniversityEvents from '../components/UniversityEvents';
-import LocalEvents from '../components/LocalEvents';
+import LargeEvents from '../components/events/LargeEvents';
+import UniversityEvents from '../components/events/UniversityEvents';
+import LocalEvents from '../components/events/LocalEvents';
 
 const Events = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/events')
-      .then(response => setEvents(response.data))
-      .catch(error => console.error('Error fetching events:', error));
+    // Retrieve events from local storage
+    const storedEvents = localStorage.getItem('events');
+    if (storedEvents) {
+      setEvents(JSON.parse(storedEvents));
+    }
   }, []);
 
   const handleClick = (eventId) => {
     localStorage.setItem('selectedEventId', eventId);
   };
-
   const renderEventCards = () => (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="flex flex-wrap justify-center gap-6 mb-12">
       {events.map(event => (
-        <div key={event._id} className="bg-gray-300 shadow-md rounded-lg p-6 mb-6">
-          <img src={event.eventImg} alt={event.eventName} className="w-full h-40 object-cover rounded-t-lg mb-4" />
-          <h2 className="text-xl font-bold mb-2">{event.eventName}</h2>
-          <p className="text-gray-700 mb-4">{event.eventDesc}</p>
-          <p className="text-gray-500 mb-4">{new Date(event.eventDate).toLocaleDateString()}</p>
-          <Link to="/event-registration">
-            <button
-              onClick={() => handleClick(event._id)}
-              className="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700"
-            >
-              Registration for Event
-            </button>
-          </Link>
+        <div key={event._id} className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 duration-300 w-full sm:w-64 md:w-72 lg:w-80">
+          <img src={event.eventImg} alt={event.eventName} className="w-full h-40 object-cover" />
+          <div className="p-4">
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">{event.eventName}</h2>
+            <p className="text-gray-600 mb-2">{event.eventDesc}</p>
+            <p className="text-gray-500 mb-4">{new Date(event.eventDate).toLocaleDateString()}</p>
+            <Link to="/event-registration">
+              <button
+                onClick={() => handleClick(event._id)}
+                className="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+              >
+                Registration for Event
+              </button>
+            </Link>
+          </div>
         </div>
       ))}
     </div>
   );
+  
 
   const renderMotionSection = (title, Component) => (
     <>
@@ -73,10 +76,12 @@ const Events = () => {
         >
           Events
         </motion.h1>
+
+        {/* Render Event Cards at the top */}
         {renderEventCards()}
       </div>
 
-      {/* Informational Section 1: Why Volunteer? */}
+      {/* Informational Sections */}
       <div className="max-w-6xl mx-2 md:mx-0 text-justify self-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -96,7 +101,6 @@ const Events = () => {
           </ul>
         </motion.div>
 
-        {/* Informational Section 2: How to Get Involved */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -115,7 +119,6 @@ const Events = () => {
           </ul>
         </motion.div>
 
-        {/* Informational Section 3: Benefits of Volunteering */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -133,6 +136,7 @@ const Events = () => {
             <li>Make lasting contributions to society</li>
           </ul>
         </motion.div>
+
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -151,7 +155,6 @@ const Events = () => {
           </ul>
         </motion.div>
 
-        {/* Informational Section 5: Event Highlights */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -170,7 +173,6 @@ const Events = () => {
           </ul>
         </motion.div>
 
-        {/* Informational Section 6: Testimonials */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -179,14 +181,14 @@ const Events = () => {
         >
           <h2 className="text-md sm:text-lg lg:text-xl font-semibold text-gray-800 mb-4">Testimonials</h2>
           <p className="text-gray-600 mb-4">
-            Hear from individuals who have participated in our past events and volunteered their time to make a difference. Their stories of impact and growth will inspire you to get involved.
+            Hear from previous volunteers about their experiences and the positive impact volunteering has had on their lives.
           </p>
-          <ul className="list-disc ml-5 text-gray-600">
-            <li>&quot;Volunteering has been a life-changing experience. I&apos;ve met incredible people and learned valuable skills.&quot;</li>
-            <li>&quot;Participating in the community events has helped me give back and grow personally.&quot;</li>
-            <li>&quot;The opportunities provided have been both rewarding and fulfilling.&quot;</li>
-            <li>&quot;Being a part of these events has boosted my confidence and leadership abilities.&quot;</li>
-          </ul>
+          <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-600 mb-4">
+            “Volunteering has opened my eyes to the needs of my community and helped me grow in ways I never expected.”
+          </blockquote>
+          <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-600 mb-4">
+            “I met amazing people while volunteering and gained invaluable skills that have helped my career.”
+          </blockquote>
         </motion.div>
       </div>
 

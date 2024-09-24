@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Image1 from '../assets/Events/TreePlantation.png';
+import SneakPeek from '../components/SneakPeek';
+import VolunteerFillerSection from '../components/volunteer/FillerSection';
 
 const Volunteer = () => {
   return (
@@ -9,17 +12,43 @@ const Volunteer = () => {
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="mt-20 mx-auto p-6 lg:p-12 max-w-6xl"
+        className="mt-10 mx-auto p-6 lg:p-12 max-w-6xl"
       >
-        <div className="text-center mb-12">
+        <div className="text-center h-svh flex flex-col">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
             Volunteer with Us
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-800">
-            Join our dedicated team of volunteers and be a driving force for meaningful transformation. By offering your time, skills, and unwavering passion, you can make a profound impact on our community, inspire positive change, and help build a legacy of compassion and progress that will echo through generations. Together, we can forge a brighter future and create lasting differences that uplift and empower those around us.
-          </p>
+          <div className='flex flex-col justify-around items-center'>
+            <p className="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-800">
+              Join our dedicated team of volunteers and be a driving force for meaningful transformation. By offering your time, skills, and unwavering passion, you can make a profound impact on our community, inspire positive change, and help build a legacy of compassion and progress that will echo through generations. Together, we can forge a brighter future and create lasting differences that uplift and empower those around us.
+            </p>
+            <img
+              src={Image1}
+              alt="Volunteers"
+              className="w-full h-80 object-cover rounded-2xl"
+            />
+          </div>
         </div>
 
+        {/* Volunteer Benefits */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="bg-white p-8 rounded-lg shadow-lg mb-12"
+        >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-green-800 mb-6 text-center">Volunteer Benefits</h2>
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-4 text-center">
+            Discover the numerous benefits of volunteering with us, from personal growth to professional development.
+          </p>
+          <ul className="list-disc ml-6 sm:ml-8 lg:ml-10 text-gray-600">
+            <li>Develop leadership and teamwork skills</li>
+            <li>Gain hands-on experience in various fields</li>
+            <li>Enhance your resume and career prospects</li>
+            <li>Build a network of like-minded individuals</li>
+            <li>Receive certificates and awards for your contributions</li>
+          </ul>
+        </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -73,6 +102,8 @@ const Volunteer = () => {
             </ul>
           </motion.div>
         </div>
+
+        {/* Informational Section 1: Why Volunteer? */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -89,140 +120,47 @@ const Volunteer = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="bg-white p-8 rounded-lg shadow-md mb-12"
-        >
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">Build Lifelong Friendships</h3>
-          <p className="text-gray-600">
-            The NSS experience fosters deep friendships and connections with like-minded individuals. By working together on projects, volunteers not only grow as individuals but also form a network of lifelong companions.
-          </p>
-          <p className="text-gray-600">
-            Frequent meetups, discussions, and group activities create an environment where volunteers share their passion for social service while developing strong relationships that last a lifetime.
-          </p>
-        </motion.div>
-
-
-
-        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-center mb-12"
         >
-          <Link
-            to="/volunteer-policy"
-            className="inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out text-lg"
+          <SneakPeek />
+        </motion.div>
+
+        <div>
+          {/* Build Lifelong Friendships */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="bg-white p-8 rounded-lg shadow-md mb-12"
           >
-            View Volunteer Policy
-          </Link>
-        </motion.div>
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">Build Lifelong Friendships</h3>
+            <p className="text-gray-600">
+              The NSS experience fosters deep friendships and connections with like-minded individuals. By working together on projects, volunteers not only grow as individuals but also form a network of lifelong companions.
+            </p>
+            <p className="text-gray-600">
+              Frequent meetups, discussions, and group activities create an environment where volunteers share their passion for social service while developing strong relationships that last a lifetime.
+            </p>
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="bg-white p-8 rounded-lg shadow-lg mb-12"
-        >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 mb-6 text-center">Volunteer Benefits</h2>
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-4 text-center">
-            Discover the numerous benefits of volunteering with us, from personal growth to professional development.
-          </p>
-          <ul className="list-disc ml-6 sm:ml-8 lg:ml-10 text-gray-600">
-            <li>Develop leadership and teamwork skills</li>
-            <li>Gain hands-on experience in various fields</li>
-            <li>Enhance your resume and career prospects</li>
-            <li>Build a network of like-minded individuals</li>
-            <li>Receive certificates and awards for your contributions</li>
-          </ul>
-        </motion.div>
-
-        {/* Notable People & Inspirational Stories Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="bg-gray-100 p-8 rounded-lg shadow-lg mb-12"
-        >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 mb-6 text-center">Notable Volunteers & Inspirational Stories</h2>
-          <div className="space-y-6">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="bg-white p-6 rounded-lg shadow-md"
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="text-center mb-12"
+          >
+            <Link
+              to="/volunteer-policy"
+              className="inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out text-lg"
             >
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">Mother Teresa&apos;s Legacy</h3>
-              <p className="text-gray-600">
-                Mother Teresa devoted her life to serving the poor and destitute around the world. Her selfless work through the Missionaries of Charity continues to inspire volunteers across the globe.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="bg-white p-6 rounded-lg shadow-md"
-            >
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">Dr. APJ Abdul Kalam&apos;s Vision</h3>
-              <p className="text-gray-600">
-                Dr. APJ Abdul Kalam, the &apos;People&apos;s President,&apos; emphasized giving back to society through education and social service. His contributions continue to motivate young volunteers to take up social causes.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="bg-white p-6 rounded-lg shadow-md"
-            >
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">NSS Alumni Achievements</h3>
-              <p className="text-gray-600">
-                National Service Scheme (NSS) alumni have achieved remarkable success, including K. Radhakrishnan, former ISRO chairman, who actively volunteered during his college days, instilling a lifelong spirit of service.
-              </p>
-            </motion.div>
-          </div>
-        </motion.div>
+              View Volunteer Policy
+            </Link>
+          </motion.div>
+        </div>
 
-        {/* Connecting with Nature & Rural India Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="bg-gray-100 p-8 rounded-lg shadow-lg mb-12"
-        >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 mb-6 text-center">Connecting with Nature & Rural India</h2>
-          <p className="text-gray-600 text-lg mb-4">
-            NSS brings you closer to nature and rural communities, offering a wholesome experience that promotes both environmental awareness and rural development. Through hands-on involvement in projects like tree plantations, village development, and clean energy initiatives, volunteers learn the importance of preserving natural resources.
-          </p>
-          <p className="text-gray-600 text-lg">
-            Volunteering in rural areas exposes you to different cultures, traditions, and the beauty of simplicity, fostering personal growth and a deeper understanding of India’s diversity.
-          </p>
-        </motion.div>
-
-
-        {/* Government Schemes Promoting Social Work */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="bg-gray-100 p-8 rounded-lg shadow-lg mb-12"
-        >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 mb-6 text-center">Government Schemes Supporting Volunteering</h2>
-          <ul className="list-disc ml-6 sm:ml-8 lg:ml-10 text-gray-600">
-            <li>
-              <strong>National Service Scheme (NSS):</strong> A nationwide youth program encouraging students to engage in community service and social welfare activities.
-            </li>
-            <li>
-              <strong>Swachh Bharat Abhiyan:</strong> A national campaign launched by the Government of India to clean streets, roads, and infrastructure across India, promoting volunteer-driven cleanliness drives.
-            </li>
-            <li>
-              <strong>Atal Innovation Mission (AIM):</strong> Encourages youth to volunteer in developing innovative solutions for social challenges through grassroots initiatives.
-            </li>
-            <li>
-              <strong>Pradhan Mantri Kaushal Vikas Yojana (PMKVY):</strong> Volunteers are encouraged to join skill development programs aimed at empowering disadvantaged communities with vocational training.
-            </li>
-          </ul>
-        </motion.div>
+        {/* Informational Section 2: Connecting with Nature & Rural India */}
+        <VolunteerFillerSection />
       </motion.div>
     </div>
   );
