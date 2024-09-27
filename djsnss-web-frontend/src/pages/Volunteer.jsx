@@ -2,19 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Image1 from '../assets/Events/TreePlantation.png';
-import SneakPeek from '../components/SneakPeek';
 import VolunteerFillerSection from '../components/volunteer/FillerSection';
 
 const Volunteer = () => {
   return (
-    <div className="bg-gradient-to-r w-full from-blue-300 to-purple-300 text-white flex flex-col">
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="mt-10 mx-auto p-6 lg:p-12 max-w-6xl"
+    <div className='bg-gradient-to-r  from-blue-300 to-purple-300'>
+          <div className="mt-10 p-6 mx-auto max-w-7xl text-white flex flex-col justify-center">
+      <div className="mt-10 "
       >
-        <div className="text-center h-svh flex flex-col">
+        <div className="text-center min-h-svh flex flex-col">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
             Volunteer with Us
           </h1>
@@ -22,11 +18,7 @@ const Volunteer = () => {
             <p className="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-800">
               Join our dedicated team of volunteers and be a driving force for meaningful transformation. By offering your time, skills, and unwavering passion, you can make a profound impact on our community, inspire positive change, and help build a legacy of compassion and progress that will echo through generations. Together, we can forge a brighter future and create lasting differences that uplift and empower those around us.
             </p>
-            <img
-              src={Image1}
-              alt="Volunteers"
-              className="w-full h-80 object-cover rounded-2xl"
-            />
+            <img src={Image1} alt="Tree Plantation" className="max-h-96 rounded-lg shadow-lg mb-8" />
           </div>
         </div>
 
@@ -38,10 +30,10 @@ const Volunteer = () => {
           className="bg-white p-8 rounded-lg shadow-lg mb-12"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-green-800 mb-6 text-center">Volunteer Benefits</h2>
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-4 text-center">
-            Discover the numerous benefits of volunteering with us, from personal growth to professional development.
+          <p className="text-md sm:text-lg lg:text-xl text-gray-600 mb-4 text-center">
+            Discover the numerous benefits of volunteering with us, from personal growth to professional development and community engagement. Make a difference while gaining valuable skills and experiences. Join us today and be a part of something bigger than yourself.
           </p>
-          <ul className="list-disc ml-6 sm:ml-8 lg:ml-10 text-gray-600">
+          <ul className="list-disc text-gray-600 ml-0 md:ml-20">
             <li>Develop leadership and teamwork skills</li>
             <li>Gain hands-on experience in various fields</li>
             <li>Enhance your resume and career prospects</li>
@@ -56,7 +48,7 @@ const Volunteer = () => {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">Why Volunteer?</h2>
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800 mb-4">Why Volunteer?</h2>
             <p className="text-gray-600 mb-4">
               Volunteering provides an opportunity to enhance your skills, build networks, and give back to the community. Make a tangible difference and grow personally and professionally.
             </p>
@@ -73,7 +65,7 @@ const Volunteer = () => {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">How to Get Involved</h2>
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800 mb-4">How to Get Involved</h2>
             <p className="text-gray-600 mb-4">
               Explore ways to contribute, from signing up for programs to participating in community events and special projects tailored to your interests and skills.
             </p>
@@ -90,7 +82,7 @@ const Volunteer = () => {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">Upcoming Events</h2>
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800 mb-4">Upcoming Events</h2>
             <p className="text-gray-600 mb-4">
               Join our upcoming events and make an impact. Participate in clean-ups, charity runs, food drives, and more!
             </p>
@@ -119,14 +111,6 @@ const Volunteer = () => {
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-        >
-          <SneakPeek />
-        </motion.div>
-
         <div>
           {/* Build Lifelong Friendships */}
           <motion.div
@@ -135,7 +119,7 @@ const Volunteer = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="bg-white p-8 rounded-lg shadow-md mb-12"
           >
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">Build Lifelong Friendships</h3>
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800 mb-4">Build Lifelong Friendships</h3>
             <p className="text-gray-600">
               The NSS experience fosters deep friendships and connections with like-minded individuals. By working together on projects, volunteers not only grow as individuals but also form a network of lifelong companions.
             </p>
@@ -161,7 +145,9 @@ const Volunteer = () => {
 
         {/* Informational Section 2: Connecting with Nature & Rural India */}
         <VolunteerFillerSection />
-      </motion.div>
+      </div>
+    </div>
+
     </div>
   );
 };

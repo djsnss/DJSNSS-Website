@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
-import logo from '../assets/DJSLogo.png';
+import DJSLogo from '../assets/DJSLogo.png';
+import DJSNSSLogo from '../assets/DJSNSSLogo.png';
+import NSSLogo from '../assets/NSSLogo.png';
 import CorePic from '../assets/Core.jpg';
 import ImageCarousel from '../components/ImageCarousel';
 import SneakPeek from '../components/SneakPeek';
@@ -32,14 +34,32 @@ const Home = () => {
         transition={{ duration: 1 }}
       >
         <div className="w-full h-full bg-black bg-opacity-30 flex flex-col items-center justify-center">
-          <motion.img
-            src={logo}
-            alt="NSS IIT Delhi"
-            className="h-20 w-20 mb-10"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1.2 }}
-          />
+          <div className='flex flex-row justify-evenly items-center'>
+            <motion.img
+              src={DJSNSSLogo}
+              alt="NSS DJSCE Logo"
+              className="h-20 mb-10"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1.2 }}
+            />
+            <motion.img
+              src={DJSLogo}
+              alt="NSS DJSCE Logo"
+              className="h-20 mb-10"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1.2 }}
+            />
+            <motion.img
+              src={NSSLogo}
+              alt="NSS Logo"
+              className="h-20 mb-10"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1.2 }}
+            />
+          </div>
           <motion.h1
             className="text-xl md:text-5xl sm:text-3xl font-bold mb-10 mx-2 text-center text-white"
             initial={{ y: -50, opacity: 0 }}

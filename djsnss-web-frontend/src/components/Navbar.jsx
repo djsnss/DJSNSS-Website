@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { MenuLinks } from '../data/index';
-import logo from '../assets/logo.png';
-import DJSLogo from '../assets/DJSLogo.png';
+import DJSNSSLogo from '../assets/DJSNSSLogo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +39,7 @@ const Navbar = () => {
       <div className="container mx-auto flex lg:justify-evenly justify-between items-center p-3">
         <div className='flex justify-start items-center '>
           <Link to="/" className="text-xl font-bold text-gray-800 items-center flex">
-            <img src={logo} alt="Logo" className="h-10 w-10 mr-2" />
+            <img src={DJSNSSLogo} alt="Logo" className="h-10 w-10 mr-2" />
             DJSNSS
           </Link>
         </div>
@@ -85,7 +84,7 @@ const Navbar = () => {
       >
         <button onClick={toggleMenu} className="text-gray-800 w-full h-8 flex items-center justify-between focus:outline-none">
           <Link href="/" className='flex'>
-            <img src={logo} alt="DJS NSS Logo" className="h-10 w-10 self-center" />
+            <img src={DJSNSSLogo} alt="DJS NSS Logo" className="h-10 w-10 self-center" />
             <span className='font-bold text-xl lg:text-2xl px-2'>DJSNSS
             </span>
           </Link>

@@ -30,7 +30,7 @@ const App = () => {
       <div className="flex flex-col justify-between h-screen">
         <Navbar />
         <ScrollToTop />
-        <Suspense fallback={<div className='h-screen flex items-center justify-center bg-gradient-to-tr from-blue-300 to-white'><Loader className="z-" /></div>}>
+        <Suspense fallback={<div className='h-screen flex items-center justify-center bg-gradient-to-tr from-blue-300 to-white'><Loader className="pt-20 h-40" /></div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />

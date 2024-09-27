@@ -7,6 +7,15 @@ import UniversityEventsCarousel from '../components/aboutUs/AboutUsCarousel';
 import LocalEventsCarousel from '../components/aboutUs/AboutUsCarousel2';
 
 const About = () => {
+
+  const coCommRoles = [
+    { title: '🖋 Editorial Department', description: 'The Editorial team ensures that all written communication for NSS, from articles to reports, is clear, engaging, and well-crafted. They play a key role in shaping the public narrative of NSS and ensuring that every story is told effectively. Their work is as vital as any other, contributing significantly to the overall communication and reputation of the committee.' },
+    { title: '🎨 Creative Department', description: "Creatives are the imaginative minds behind NSS's visual identity. Whether it's designing posters or creating engaging social media content, their artistic contributions bring every project to life. Their efforts, like those of the other departments, are crucial in making sure NSS stands out in every aspect." },
+    { title: '📢 Publicity Department', description: "The Publicity team works to ensure that all NSS events and initiatives reach the maximum audience. Their efforts in promotion and outreach help NSS build a strong presence. As with every department, their role is integral to the committee's success." },
+    { title: '🎉 Events Department', description: "The Events team is responsible for planning and executing all NSS events, making sure everything runs smoothly. From logistics to coordination, they ensure that every initiative is impactful. Like the other departments, their work is fundamental in achieving NSS's goals." },
+    { title: '💻 Technical Department', description: "The Technical team manages the digital and tech needs of NSS along with coveted outhouses software and hardware projects to shine on your resume, ensuring that all platforms run efficiently. Whether it's handling the website or tech setups for events, their contribution is as critical as any other, enabling NSS to operate seamlessly." }
+  ];
+
   return (
     <div className='flex flex-col bg-gradient-to-r pt-12 from-pink-200 to-blue-300 text-gray-800'>
       <div className="max-w-7xl mx-auto p-4 sm:p-6 md:p-8 lg:p-12">
@@ -15,7 +24,7 @@ const About = () => {
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-6"
+          className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6"
         >
           About Us
         </motion.h1>
@@ -27,7 +36,7 @@ const About = () => {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="bg-white p-4 sm:p-6 md:p-8 lg:p-12 rounded-lg shadow-lg mb-10"
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-4 font-cursive">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-center mb-4 font-cursive">
             Our Mission and Vision
           </h2>
           <div className="flex flex-col lg:flex-row lg:space-x-8">
@@ -46,29 +55,23 @@ const About = () => {
           </div>
         </motion.div>
 
-        {/* University Events Section
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="items-center mb-10"
+          className='flex flex-col lg:flex-row flex-wrap'
         >
-          <UniversityEventsCarousel />
-        </motion.div> */}
+          {
+            coCommRoles.map((role, index) => (
+              <div key={index} className='bg-white p-6 rounded-lg shadow-md my-4 lg:w-[48%] mx-auto'>
+                <h3 className='text-lg sm:text-xl lg:text-2xl font-semibold text-black mb-4 font-cursive'>{role.title}</h3>
+                <p className='text-black text-sm sm:text-base md:text-lg lg:text-xl'>{role.description}</p>
+              </div>
+            ))
+          }
+        </motion.div>
 
-        {/* Faculty Section */}
         <Faculty />
-
-        
-{/* 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="p-4 sm:p-6 md:p-8 lg:p-12 mb-10"
-        >
-          <LocalEventsCarousel />
-        </motion.div> */}
 
         {/* Core Team Section */}
         <motion.div
